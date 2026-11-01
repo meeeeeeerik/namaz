@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Намаз">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#eef1f3">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADw0lEQVR4Xu3bwW0bMRRF0XHgrRtIaSlCa5eQdYp0HVkIEAzZluYPOeQnec46iCL5+ZIjIC9vlz8bfOeXj4WfGAfGQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQdy65fh4v8Q/rrW8rvN279bw+++/dd77MfOP49tCWMYe047jwalhGTtNOI4Hs9g2ywiYahyPZ2EZUZOM4+ksLOOA4cexZxaWcczY33NYxqlGLcfOWWhGiSHLsX8ZlBhvHKFl+EqjxEjHSmgWDpRyw5QjugzKjTGOA8twoJQbYByW0Uv2cRxYBrWkHsexZThQakk9DvrKO45j2aCipOM4vAxnSkUZx3F4GdSVcRyHyUZd6cYhG3nkGodlpJJrHKSSaByF2XDhqC7ROMgmyzgKs8EZsoyDhFKMQzZySjGOcm6jZ+g/DtlIq/84SMs4+FHncThTMus8DjIzDlIeK86U5JSDlOUgOeVAOYjrVg630fy6jaMuUzvDJOPgDMaBCylxysEC5XAnrU45WKAcVKccrFEO1466lIM1yrFt4lGTcrBMOaioWznO+w+MrqW1dBsH+c05DvGoYs5xeGypYtpxUK7nOM67k145XAr1HEcD9lFi8nFQovM4zj5ZHC4lOo+jDYfLMUuMQz+O6T+OBieLh5dj+o+jJedLSIpxNIuH8yUkxTga04+dsoyjZTz0Y6cs42hPP55KNI7G8dCPp16f/om5XfvRZpd3rWrzoiUSlaPZD+mrBkfM15do8KKFXt4ufwr/iuo6fmon/TY/eEcnvWIVucrR3Rm7fPx3nvGKtWQcR99fpo/3S+YfWEsZx9Hx8nFzncjiK0k6jgz7uFp5Iqs/yu70OSF9T72WMj6tfJY/7Hu2MujTSvZxzP095p5hdZT3znGT/BM8LP/7GmAceS6nFeVfxrYNMo7J9jHEMrZthDvHnfxX1AdGmcXVGMfKZ2N9vkP/y8cbx6BHzIibHuBR9oEhjpgRZzHqsTJWqMddxpAX0m8lTMjQs7ga+1jJ+SAzwSwmHMdVx4pMM4tpx9FlIpPNYvJx3Jwakik3cTPVneOxiiuZexMrjqPk9rrIGu4sVA6ihvz6nDaMgx8ZB8ZBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMT9B3hc4NPiv+6vAAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADw0lEQVR4Xu3bwW0bMRRF0XHgrRtIaSlCa5eQdYp0HVkIEAzZluYPOeQnec46iCL5+ZIjIC9vlz8bfOeXj4WfGAfGQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQZxyoBzEKQfKQdy65fh4v8Q/rrW8rvN279bw+++/dd77MfOP49tCWMYe047jwalhGTtNOI4Hs9g2ywiYahyPZ2EZUZOM4+ksLOOA4cexZxaWcczY33NYxqlGLcfOWWhGiSHLsX8ZlBhvHKFl+EqjxEjHSmgWDpRyw5QjugzKjTGOA8twoJQbYByW0Uv2cRxYBrWkHsexZThQakk9DvrKO45j2aCipOM4vAxnSkUZx3F4GdSVcRyHyUZd6cYhG3nkGodlpJJrHKSSaByF2XDhqC7ROMgmyzgKs8EZsoyDhFKMQzZySjGOcm6jZ+g/DtlIq/84SMs4+FHncThTMus8DjIzDlIeK86U5JSDlOUgOeVAOYjrVg630fy6jaMuUzvDJOPgDMaBCylxysEC5XAnrU45WKAcVKccrFEO1466lIM1yrFt4lGTcrBMOaioWznO+w+MrqW1dBsH+c05DvGoYs5xeGypYtpxUK7nOM67k145XAr1HEcD9lFi8nFQovM4zj5ZHC4lOo+jDYfLMUuMQz+O6T+OBieLh5dj+o+jJedLSIpxNIuH8yUkxTga04+dsoyjZTz0Y6cs42hPP55KNI7G8dCPp16f/om5XfvRZpd3rWrzoiUSlaPZD+mrBkfM15do8KKFXt4ufwr/iuo6fmon/TY/eEcnvWIVucrR3Rm7fPx3nvGKtWQcR99fpo/3S+YfWEsZx9Hx8nFzncjiK0k6jgz7uFp5Iqs/yu70OSF9T72WMj6tfJY/7Hu2MujTSvZxzP095p5hdZT3znGT/BM8LP/7GmAceS6nFeVfxrYNMo7J9jHEMrZthDvHnfxX1AdGmcXVGMfKZ2N9vkP/y8cbx6BHzIibHuBR9oEhjpgRZzHqsTJWqMddxpAX0m8lTMjQs7ga+1jJ+SAzwSwmHMdVx4pMM4tpx9FlIpPNYvJx3Jwakik3cTPVneOxiiuZexMrjqPk9rrIGu4sVA6ihvz6nDaMgx8ZB8ZBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMQpB8pBnHKgHMT9B3hc4NPiv+6vAAAAAElFTkSuQmCC">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Намаз-трекер</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap">
+<style>
+/* Layout: one column on phones; from 900px the day (band + today) sits left, week + plan right; duas run full width below. */
+:root{
+  --bg:#eef1f3; --surface:#ffffff; --ink:#14202b; --muted:#5b6b78; --line:#d8dfe5;
+  --accent:#0d6e5a; --accent-ink:#ffffff; --accent-soft:#dcefe8;
+  --dawn:#c27a22; --warn:#a4462f;
+  --sky-night:#2c3a63; --sky-dawn:#e2a356; --sky-day:#9cc6e0;
+  --font-body:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-ar:"Amiri","Noto Naskh Arabic","Geeza Pro","Traditional Arabic",serif;
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c131b; --surface:#141e29; --ink:#e6edf2; --muted:#93a3b0; --line:#253341;
+  --accent:#4cc3a0; --accent-ink:#06261e; --accent-soft:#163a31;
+  --dawn:#e6a75a; --warn:#ef8a70;
+  --sky-night:#1b2546; --sky-dawn:#b9773a; --sky-day:#3f6f8f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c131b; --surface:#141e29; --ink:#e6edf2; --muted:#93a3b0; --line:#253341;
+  --accent:#4cc3a0; --accent-ink:#06261e; --accent-soft:#163a31;
+  --dawn:#e6a75a; --warn:#ef8a70;
+  --sky-night:#1b2546; --sky-dawn:#b9773a; --sky-day:#3f6f8f; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{font-size:calc(100% * var(--fs,1))}
+body{background:var(--bg);color:var(--ink);font:400 .9375rem/1.5 var(--font-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px calc(88px + env(safe-area-inset-bottom,0px))}
+.wrap{max-width:1120px;margin:0 auto;display:grid;gap:20px}
+h1,h2,h3{margin:0;text-wrap:balance;line-height:1.2}
+h2{font-size:1.05rem;font-weight:600}
+.eyebrow{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.num{font-variant-numeric:tabular-nums}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Header */
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
+.top h1{font-size:clamp(1.6rem,4.5vw,2.2rem);font-weight:700;letter-spacing:-.01em}
+.top .date{color:var(--muted);margin-top:4px}
+.next{display:flex;flex-direction:column;align-items:flex-end;gap:2px;text-align:right}
+.next b{font-size:1.5rem;font-weight:700}
+.next span{color:var(--muted);font-size:.9rem}
+@media (max-width:520px){.next{display:none}}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;justify-content:space-between;align-items:center;gap:8px 14px;flex-wrap:nowrap;
+  margin-top:-20px;margin-left:calc(-1 * max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(16px,env(safe-area-inset-right,0px)));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px;
+  background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bg)}
+.bar-left{display:flex;align-items:baseline;gap:2px 12px;flex-wrap:wrap;min-width:0;flex:1}
+@media (max-width:480px){.fontctl output{display:none}.fontctl button{min-width:34px;height:32px}.mini{font-size:.78rem}}
+.mini{font-size:.85rem;color:var(--muted)}
+.mini b{color:var(--ink);font-weight:600}
+.clock{font-size:clamp(1.6rem,6vw,2.1rem);font-weight:700;letter-spacing:-.02em;line-height:1}
+.clock small{font-size:.45em;color:var(--muted);font-weight:500;margin-left:2px}
+.fontctl{display:flex;align-items:center;gap:4px;border:1px solid var(--line);border-radius:99px;padding:3px;background:var(--surface)}
+.fontctl button{border:0;background:transparent;border-radius:99px;min-width:40px;height:36px;cursor:pointer;font-weight:600}
+.fontctl button:hover:not(:disabled){background:var(--accent-soft)}
+.fontctl button:disabled{opacity:.35;cursor:default}
+.fontctl output{min-width:48px;text-align:center;font-size:.85rem;color:var(--muted)}
+.barctl{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.artog{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-family:var(--font-ar);font-size:1.25rem;line-height:1;color:var(--muted)}
+.artog[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+html.no-ar .ar{display:none!important}
+
+/* Beginner guide */
+.lead{margin:0;color:var(--muted);max-width:68ch}
+.rak{width:100%;border-collapse:collapse;font-size:.92rem}
+.rak th,.rak td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.rak th{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.rak td:first-child{font-weight:600;white-space:nowrap}
+.rak .f{color:var(--accent);font-weight:700}
+.scroll{overflow-x:auto}
+.howto{margin:0;padding-left:1.4em;display:grid;gap:12px;max-width:72ch}
+.howto li::marker{color:var(--accent);font-weight:700}
+.howto b{font-weight:600}
+.howto .say{display:block;margin-top:4px;padding:8px 12px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0}
+.howto .say .ar{font-family:var(--font-ar);font-size:1.25rem;direction:rtl;text-align:right;display:block;line-height:1.8}
+.note{padding:12px 14px;border-radius:10px;border:1px dashed var(--line);color:var(--muted);font-size:.9rem;max-width:72ch}
+.terms{display:grid;gap:8px 16px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));margin:0}
+.terms div{min-width:0}
+.terms dt{font-weight:600}
+.terms dd{margin:0;color:var(--muted);font-size:.9rem}
+
+/* Day band */
+.band{position:relative;height:44px;border-radius:10px;overflow:hidden;margin-top:6px}
+.band .now{position:absolute;top:0;bottom:0;width:2px;background:var(--ink);box-shadow:0 0 0 2px color-mix(in srgb,var(--surface) 70%,transparent)}
+.ticks{position:relative;height:34px;margin-top:6px;font-size:.72rem;color:var(--muted)}
+.ticks i b{font-weight:400}
+.ticks i{position:absolute;top:0;transform:translateX(-50%);font-style:normal;white-space:nowrap;text-align:center;line-height:1.2}
+.ticks i::before{content:"";display:block;width:1px;height:6px;background:var(--line);margin:0 auto 2px}
+@media (max-width:560px){.ticks{height:20px}.ticks i b{display:none}}
+
+.grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media (min-width:900px){.grid{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:start}}
+.col{display:grid;gap:20px;min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;display:grid;gap:14px;min-width:0}
+.panel-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.panel-head .meta{color:var(--muted);font-size:.85rem}
+
+/* Today */
+.prayers{display:grid;gap:8px;list-style:none;margin:0;padding:0}
+.prayer{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;border:1px solid var(--line)}
+.prayer.current{border-color:var(--accent);background:var(--accent-soft)}
+.prayer.off{opacity:.62}
+.p-name{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.p-name strong{font-weight:600;font-size:1.02rem}
+.p-name .ar{font-family:var(--font-ar);font-size:1.15rem;color:var(--muted)}
+.p-sub{font-size:.85rem;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:.72rem;font-weight:600;padding:1px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.tag.now{border-color:var(--accent);color:var(--accent)}
+.tag.late{border-color:var(--warn);color:var(--warn)}
+.check{width:46px;height:46px;border-radius:50%;border:2px solid var(--line);background:transparent;cursor:pointer;display:grid;place-items:center;transition:background .15s,border-color .15s}
+.check svg{width:22px;height:22px;opacity:0;transition:opacity .15s}
+.check[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.check[aria-pressed="true"] svg{opacity:1}
+.check:hover{border-color:var(--accent)}
+
+/* Week */
+.week{display:grid;grid-template-columns:auto repeat(7,minmax(0,1fr));gap:6px;align-items:center}
+.week .h{font-size:.72rem;color:var(--muted);text-align:center}
+.week .h.today{color:var(--accent);font-weight:700}
+.week .rl{font-size:.8rem;color:var(--muted);padding-right:4px}
+.dot{aspect-ratio:1;max-width:36px;width:100%;justify-self:center;border-radius:50%;border:1.5px solid var(--line);background:transparent;cursor:pointer;padding:0}
+.dot.on{background:var(--accent);border-color:var(--accent)}
+.dot.plan:not(.on){border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+.dot:disabled{cursor:default;opacity:.35}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--line);display:inline-block}
+.legend i.on{background:var(--accent);border-color:var(--accent)}
+.legend i.plan{border-color:color-mix(in srgb,var(--accent) 55%,var(--line))}
+
+/* Plan */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:12px;padding:10px 12px;border-radius:10px}
+.step .w{font-weight:700;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);font-size:.9rem}
+.step.done .w{background:var(--accent-soft);border-color:var(--accent-soft);color:var(--accent)}
+.step.active{background:var(--accent-soft)}
+.step.active .w{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.step p{margin:2px 0 0;color:var(--muted);font-size:.88rem}
+.restart{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+.btn{border:1px solid var(--line);background:transparent;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:.85rem}
+.btn:hover{border-color:var(--accent)}
+.btn.danger{border-color:var(--warn);color:var(--warn)}
+
+/* Duas */
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{border:1px solid var(--line);background:transparent;border-radius:99px;padding:6px 14px;cursor:pointer;font-weight:500}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.duas{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:760px){.duas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.dua{border:1px solid var(--line);border-radius:12px;padding:16px;display:grid;gap:8px;align-content:start;min-width:0}
+.dua .when{font-size:.78rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.dua .ar{font-family:var(--font-ar);font-size:1.45rem;line-height:1.9;direction:rtl;text-align:right}
+.dua .tr{font-weight:500}
+.dua .ru{color:var(--muted);font-size:.92rem}
+.dua .src{font-size:.78rem;color:var(--muted)}
+.dua.wide{grid-column:1/-1}
+.routine{margin:0;padding-left:1.3em;display:grid;gap:6px}
+.routine li::marker{color:var(--accent);font-weight:700}
+
+/* Start / onboarding */
+.start{border-color:var(--accent)}
+.start-steps{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:s}
+.start-steps li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;counter-increment:s}
+.start-steps li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.start-steps .when{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.start-steps p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+.rules{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.rules div{padding:10px 12px;border-radius:10px;background:var(--accent-soft);font-size:.9rem;min-width:0}
+.rules b{display:block}
+a{color:var(--accent)}
+#guide,.dua,.panel,.prayers{scroll-margin-top:calc(88px + env(safe-area-inset-top,0px))}
+
+/* Habits */
+.habit .p-sub{display:block}
+.tag.new{border-color:var(--dawn);color:var(--dawn)}
+.prog{font-size:.85rem;font-weight:600;color:var(--accent)}
+.soon{font-size:.85rem;color:var(--muted);padding:10px 12px;border-radius:10px;border:1px dashed var(--line)}
+
+/* Counter */
+.zchips{display:flex;gap:6px;flex-wrap:wrap}
+.counter{display:grid;justify-items:center;gap:10px;text-align:center}
+.counter .ar{font-family:var(--font-ar);font-size:1.3rem;line-height:1.8;direction:rtl}
+.counter .tr{font-size:.9rem;color:var(--muted);max-width:44ch}
+.tap{position:relative;width:min(220px,62vw);aspect-ratio:1;max-width:100%;border-radius:50%;border:0;background:var(--accent-soft);cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.tap:active{transform:scale(.97)}
+.tap svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.tap .n{font-size:3rem;font-weight:700;line-height:1}
+.tap .of{font-size:.85rem;color:var(--muted)}
+.tap.full{background:var(--accent);color:var(--accent-ink)}
+.tap.full .of{color:var(--accent-ink)}
+
+/* Practice launcher */
+.launch{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.launch button{display:grid;gap:2px;text-align:left;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:transparent;cursor:pointer}
+.launch button:hover{border-color:var(--accent);background:var(--accent-soft)}
+.launch b{font-size:1.05rem}
+.launch span{font-size:.82rem;color:var(--muted)}
+
+/* Practice overlay */
+.pray{position:fixed;inset:0;z-index:50;background:var(--bg);display:grid;grid-template-rows:auto minmax(0,1fr) auto;height:100%}
+.pray-top,.pray-bot{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));background:var(--surface)}
+.pray-top{padding-top:calc(10px + env(safe-area-inset-top,0px));padding-bottom:10px;border-bottom:1px solid var(--line);display:grid;gap:8px}
+.pray-row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pray-top,.pray-bot{font-size:15px}
+.pray-row h2{font-size:1.05em}
+.pfs{display:flex;gap:6px;flex-shrink:0}
+.pfs button{height:38px;min-width:42px;padding:0 10px;border-radius:10px;border:1px solid var(--line);background:transparent;cursor:pointer;font-weight:700}
+.pfs button:disabled{opacity:.35;cursor:default}
+.pfs .stop{border-color:var(--warn);color:var(--warn);font-weight:600}
+.pray-row .r{font-size:.85em;color:var(--muted)}
+.pbar{height:4px;border-radius:2px;background:var(--line);overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--accent)}
+[hidden]{display:none!important}
+.pray-scroll{position:relative;min-height:0;overflow-y:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));scroll-behavior:auto}
+.pray-list{max-width:680px;margin:0 auto;display:grid;gap:14px;padding-block:25vh 60vh}
+.ps{border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:8px;opacity:.38;transition:opacity .25s,border-color .25s;cursor:pointer;background:var(--surface)}
+.ps.on{opacity:1;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.ps .pose{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);font-weight:700;display:flex;justify-content:space-between;gap:8px}
+.ps h3{font-size:1.1rem}
+.ps .ar{font-family:var(--font-ar);font-size:1.6rem;line-height:1.9;direction:rtl;text-align:right}
+.ps .tr{font-weight:600;font-size:1.05rem}
+.ps .ru{color:var(--muted);font-size:.92rem}
+.ps .rep{display:inline-block;font-size:.8rem;font-weight:700;color:var(--accent-ink);background:var(--accent);border-radius:99px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+.lv{color:var(--accent);font-weight:700}
+.xl{color:var(--dawn);font-weight:800}
+.leg{font-size:.82rem;color:var(--muted);line-height:1.6}
+.pray-top .leg{font-size:12px}
+.pshead{display:grid;grid-template-columns:minmax(0,1fr) 96px;gap:12px;align-items:start}
+.fig{margin:0;display:grid;justify-items:center;gap:2px}
+.fig svg{width:96px;height:auto;background:var(--accent-soft);border-radius:12px}
+.fig .body{fill:none;stroke:var(--ink);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.fig .body circle{fill:var(--surface)}
+.fig .gnd{stroke:var(--line);stroke-width:3}
+.fig .qib{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.fig figcaption{font-size:.7rem;color:var(--muted);text-align:center;line-height:1.2}
+.lines{display:grid;gap:0;border-top:1px solid var(--line)}
+.ln{display:grid;gap:2px;padding:10px 8px;border-bottom:1px solid var(--line);text-align:center;border-radius:10px;transition:background .2s,opacity .2s}
+.ln .ar{font-family:var(--font-ar);font-size:1.45rem;line-height:1.8;direction:rtl}
+.ln .tr{font-size:1.08rem;font-weight:600}
+.ln .ru{font-size:.9rem;color:var(--muted)}
+.ps .ln{opacity:.55}
+.ps .ln.now{opacity:1;background:var(--accent-soft)}
+.ps .ln.done{opacity:.75}
+.tblock{display:grid;gap:8px}
+.tblock h3{font-size:1rem}
+.st{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:99px;border:1px solid var(--line);white-space:nowrap}
+.st-f{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.st-v{border-color:var(--dawn);color:var(--dawn)}
+.st-s{color:var(--muted)}
+.reps{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.reps li{display:grid;gap:2px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);opacity:.5;transition:opacity .2s,background .2s,border-color .2s}
+.reps li.now{opacity:1;border-color:var(--accent);background:var(--accent-soft)}
+.reps li.done{opacity:.7}
+.reps .rn{font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.reps .ar{font-family:var(--font-ar);font-size:1.3rem;direction:rtl;text-align:right;line-height:1.8}
+.reps .tr{font-weight:600}
+.ps .hold{height:3px;border-radius:2px;background:var(--line);overflow:hidden}
+.ps .hold i{display:block;height:100%;width:0;background:var(--accent)}
+.ps.end{opacity:1;text-align:center;justify-items:center}
+.pray-bot{padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);display:grid;gap:8px}
+.ctl{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:8px;max-width:680px;margin:0 auto;width:100%}
+.ctl button{height:48px;border-radius:12px;border:1px solid var(--line);background:transparent;cursor:pointer;font-weight:600}
+.ctl .main{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.spd{display:flex;justify-content:center;align-items:center;gap:8px;font-size:.85em;color:var(--muted)}
+.spd button{border:1px solid var(--line);background:transparent;border-radius:8px;height:34px;padding:0 12px;cursor:pointer}
+.spd output{min-width:9ch;text-align:center}
+.warn{font-size:.85rem;padding:10px 12px;border-radius:10px;border:1px solid var(--warn);color:var(--ink);max-width:72ch}
+.warn b{color:var(--warn)}
+
+/* Views + bottom navigation */
+.view{display:grid;gap:20px;min-width:0}
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;justify-content:center;
+  padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px));padding-bottom:env(safe-area-inset-bottom,0px);
+  background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.nav-in{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));width:100%;max-width:560px}
+.nav a{display:grid;justify-items:center;gap:3px;padding:9px 2px 8px;color:var(--muted);text-decoration:none;font-size:.72rem;font-weight:600;border-radius:10px}
+.nav a svg{width:24px;height:24px}
+.nav a[aria-current="page"]{color:var(--accent)}
+.nav a[aria-current="page"] svg{background:var(--accent-soft);border-radius:99px;padding:2px 10px;width:44px;box-sizing:border-box;height:26px}
+.later{opacity:.42}
+.later:hover,.later:focus-within{opacity:.75}
+.flash{animation:flash 1.8s ease-out}
+@keyframes flash{0%,40%{box-shadow:0 0 0 3px var(--accent)}100%{box-shadow:0 0 0 0 transparent}}
+@media (prefers-reduced-motion:reduce){.flash{animation:none;outline:3px solid var(--accent)}}
+.plinks{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:8px 0 0;padding:0}
+.plinks a,.plinks span{font-size:.8rem;padding:3px 10px;border-radius:99px;border:1px solid var(--line);text-decoration:none;color:var(--ink);display:inline-block}
+.plinks a{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
+.plinks a:hover{background:var(--accent-soft)}
+.p-sub a{font-weight:600;white-space:nowrap}
+.nowp{border-color:var(--accent);background:color-mix(in srgb,var(--accent-soft) 45%,var(--surface))}
+.nowlist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.nowlist li{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.nowlist li.first{border-color:var(--accent)}
+.nowlist strong{font-size:1.02rem}
+.nowlist p{margin:2px 0 0;color:var(--muted);font-size:.88rem}
+.nowlist .acts{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.nowlist .acts a,.nowlist .acts button{font-size:.85rem;padding:7px 12px;border-radius:10px;border:1px solid var(--line);background:transparent;cursor:pointer;text-decoration:none;color:var(--ink);font-weight:600;white-space:nowrap}
+.nowlist .acts .do{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+@media (max-width:480px){.nowlist li{grid-template-columns:1fr}.nowlist .acts{justify-content:flex-start}}
+.zlist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.zlist li{display:grid;gap:2px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);min-width:0}
+.zlist .zw{font-size:.75rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.zlist a{font-weight:600;text-decoration:none;color:var(--ink)}
+.zlist a:hover{color:var(--accent)}
+.zlist .zn{font-size:.85rem;color:var(--accent);font-weight:600}
+.zchips .tab small{font-weight:500;opacity:.8;margin-left:4px}
+.foot{color:var(--muted);font-size:.8rem;display:grid;gap:4px}
+.sync{display:inline-flex;align-items:center;gap:6px}
+.sync i{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.sync.cloud i{background:var(--accent)}
+.toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:.85rem;max-width:calc(100% - 32px)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <div class="bar">
+    <div class="bar-left">
+      <div class="clock num" id="clock" aria-label="Текущее время">--:--</div>
+      <span class="mini num" id="mini"></span>
+    </div>
+    <div class="barctl">
+    <button class="artog" id="arTog" aria-pressed="false" aria-label="Показывать арабский текст" title="Арабский текст">ع</button>
+    <div class="fontctl" role="group" aria-label="Размер шрифта">
+      <button id="fs-down" aria-label="Уменьшить шрифт">A−</button>
+      <output id="fs-val" class="num">100%</output>
+      <button id="fs-up" aria-label="Увеличить шрифт">A+</button>
+    </div>
+    </div>
+  </div>
+  <main class="view" id="v-today" data-view="today">
+  <header class="top">
+    <div>
+      <div class="eyebrow" id="weekBadge">Неделя 1 из 4</div>
+      <h1>Намаз-трекер</h1>
+      <div class="date" id="today"></div>
+    </div>
+    <div class="next" aria-live="polite">
+      <span id="nextLabel">Следующий намаз</span>
+      <b class="num" id="nextTime">—</b>
+      <span class="num" id="nextLeft"></span>
+    </div>
+  </header>
+  <section aria-label="Время намазов на сутки">
+    <div class="band" id="band"><div class="now" id="nowLine"></div></div>
+    <div class="ticks num" id="ticks"></div>
+  </section>
+  <section class="panel nowp" id="nowPanel"></section>
+  <section class="panel start" id="startPanel" hidden></section>
+  <div class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Намазы сегодня</h2>
+          <span class="meta num" id="todayCount"></span>
+        </div>
+        <ul class="prayers" id="prayers"></ul>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Привычки сегодня</h2>
+          <span class="meta num" id="habitCount"></span>
+        </div>
+        <ul class="prayers" id="habits"></ul>
+        <div class="soon" id="soon" hidden></div>
+      </section>
+  </div>
+  </main>
+
+  <main class="view" id="v-zikr" data-view="zikr" hidden>
+      <section class="panel" id="zikrPanel">
+        <div class="panel-head">
+          <h2>Счётчик зикров</h2>
+          <div class="zchips" role="tablist" id="zchips"></div>
+        </div>
+        <div class="counter" id="counter"></div>
+      </section>
+  <section class="panel"><div class="panel-head"><h2>Какой зикр когда</h2><span class="meta">тусклое — позже по плану</span></div><ul class="zlist" id="zsched"></ul></section>
+  <p class="lead">Нажимай на круг на каждый зикр. Когда дойдёшь до цели, привычка в «Сегодня» отметится сама. Счётчики обнуляются каждый день.</p>
+  </main>
+
+  <main class="view" id="v-learn" data-view="learn" hidden>
+  <section class="panel" id="practice">
+    <div class="panel-head">
+      <h2>Тренировка намаза</h2>
+      <span class="meta">шаги идут сами</span>
+    </div>
+    <p class="lead">Выбери намаз. Шаги пойдут по очереди: текущий подсвечен, на каждый даётся время прочитать и сделать движение. Пауза, назад, вперёд и скорость — внизу экрана.</p>
+    <div class="warn"><b>Это для заучивания.</b> По ханафитскому мазхабу чтение Корана с экрана во время настоящего намаза, по мнению Абу Ханифы, делает намаз недействительным. Проходи тренировку вне намаза, повторяя слова и движения, пока не запомнишь. Настоящий намаз — по памяти.</div>
+    <div id="legPractice"></div>
+    <div class="leg"><span class="st st-f">фард</span> без него намаз недействителен · <span class="st st-v">ваджиб</span> обязательно, пропустил по забывчивости — в конце 2 земных поклона забывчивости · <span class="st st-s">сунна</span> желательно, так делал Пророк ﷺ</div>
+    <div class="launch" id="launch"></div>
+  </section>
+  <section class="panel" id="guide">
+    <div class="panel-head">
+      <h2>Как совершать намаз</h2>
+      <div class="tabs" role="tablist" id="gtabs"></div>
+    </div>
+    <div id="gbody" style="display:grid;gap:14px;min-width:0"></div>
+  </section>
+  </main>
+
+  <main class="view" id="v-dua" data-view="dua" hidden>
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Дуа и зикры</h2>
+      <div class="tabs" role="tablist" id="tabs"></div>
+    </div>
+    <div id="legDua"></div>
+    <div class="duas" id="duas"></div>
+  </section>
+  </main>
+
+  <main class="view" id="v-progress" data-view="progress" hidden>
+  <div class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Эта неделя</h2>
+          <span class="meta num" id="weekCount"></span>
+        </div>
+        <div class="week num" id="week"></div>
+        <div class="legend"><span><i class="on"></i>совершил</span><span><i class="plan"></i>по плану</span><span><i></i>сверх плана</span></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>План на 4 недели</h2>
+          <span class="meta num" id="startLabel"></span>
+        </div>
+        <ol class="steps" id="steps"></ol>
+        <div class="restart" id="restart"></div>
+      </section>
+  </div>
+  <footer class="foot">
+    <span class="sync" id="sync"><i></i><span>Отметки сохраняются в этом браузере</span></span>
+    <span>Время рассчитано для Пензы (53,20° с. ш., 45,00° в. д.): фаджр и иша при 18°, аср по ханафитскому мазхабу. Расхождение с расписанием мечети может быть несколько минут, сверяйся с ним.</span>
+    <span>Номера хадисов по нумерации sunnah.com. Проверяй там, прежде чем цитировать.</span>
+  </footer>
+  </main>
+</div>
+<nav class="nav" aria-label="Разделы"><div class="nav-in"><a href="#today" id="nav-today" data-nav="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v2M12 19v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M3 12h2M19 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg><span>Сегодня</span></a><a href="#zikr" id="nav-zikr" data-nav="zikr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg><span>Зикр</span></a><a href="#learn" id="nav-learn" data-nav="learn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg><span>Учёба</span></a><a href="#dua" id="nav-dua" data-nav="dua"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21V11l-3-3V4l4 3 3 4 3-4 4-3v4l-3 3v10"/></svg><span>Дуа</span></a><a href="#progress" id="nav-progress" data-nav="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>Прогресс</span></a></div></nav>
+<div class="toast" id="toast" hidden></div>
+<div class="pray" id="pray" hidden role="dialog" aria-modal="true" aria-labelledby="prayTitle">
+  <div class="pray-top">
+    <div class="pray-row">
+      <div><h2 id="prayTitle">Фаджр</h2><span class="r num" id="prayRak"></span></div>
+      <div class="pfs" role="group" aria-label="Размер шрифта"><button id="pfs-down" aria-label="Уменьшить шрифт">A−</button><button id="pfs-up" aria-label="Увеличить шрифт">A+</button><button class="stop" id="pStop">Стоп</button></div>
+    </div>
+    <div class="pbar"><i id="pBar"></i></div>
+    <div id="legPray"></div>
+  </div>
+  <div class="pray-scroll" id="pScroll"><div class="pray-list" id="pList"></div></div>
+  <div class="pray-bot">
+    <div class="ctl">
+      <button id="pPrev">← Назад</button>
+      <button class="main" id="pPlay">Пауза</button>
+      <button id="pNext">Дальше →</button>
+    </div>
+    <div class="spd"><button id="pSlow" aria-label="Медленнее">Медленнее</button><output id="pSpd" class="num">обычно</output><button id="pFast" aria-label="Быстрее">Быстрее</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+const LAT=53.2007, LNG=45.0046, TZ=3, ASR=2;
+const ORDER=["fajr","dhuhr","asr","maghrib","isha"];
+const NAMES={fajr:"Фаджр",dhuhr:"Зухр",asr:"Аср",maghrib:"Магриб",isha:"Иша"};
+const AR={fajr:"الفجر",dhuhr:"الظهر",asr:"العصر",maghrib:"المغرب",isha:"العشاء"};
+const SHORT={fajr:"Ф",dhuhr:"З",asr:"А",maghrib:"М",isha:"И"};
+const PLAN=[
+  {p:["fajr","isha"], t:"Фундамент: фаджр и иша", d:"Два намаза, которые всегда дома. Встаёшь по будильнику, дуа при пробуждении, своя дуа после фаджра, 33 раза «Астагфируллах», телефон вечером в другую комнату."},
+  {p:["fajr","maghrib","isha"], t:"Добавь магриб и вечер", d:"Третий намаз, 5 минут перед сном и зикр «Ля иляха илля-ллах…» 100 раз."},
+  {p:ORDER, t:"Все пять и сердце", d:"Зухр и аср в перерывах. Нужные слова в трудную минуту, благодарность в хорошую, одно тайное доброе дело."},
+  {p:ORDER, t:"Все пять вовремя и Коран", d:"Страница Корана с переводом после фаджра и 30 секунд паузы перед каждым намазом."}
+];
+/* Daily habits, unlocked week by week (w = plan week index). Taken from the videos Merdan sent. */
+const HABITS=[
+  {id:"alarm",go:"learn|wudu|",w:0,t:"Встал на фаджр по будильнику",d:"Будильник на 6:30: восход сейчас около 7:00. Встал — сразу омовение, пока не уснул снова."},
+  {id:"wake",go:"dua|morning|d-wake",w:0,t:"Дуа при пробуждении",d:"«Аль-хамду лилляхи-ллязи ахйана…» — текст во вкладке «Утро» в разделе «Дуа и зикры»."},
+  {id:"lazy",go:"dua|morning|d-lazy",w:0,t:"Дуа от лени утром",d:"«Алла:хумма инни а'у:зу бика…» — сразу после дуа при пробуждении, 20 секунд. А лучшее лекарство от лени — фаджр: шайтан завязывает на спящем три узла, и они развязываются зикром, омовением и намазом (Бухари 1142)."},
+  {id:"dua",go:"dua|morning|d-after",w:0,t:"Дуа после фаджра своими словами",d:"1–2 минуты: подними руки, «Аль-хамду ли-ллях», салават, попроси о своём на любом языке, «Амин». Пример — во вкладке «Утро»."},
+  {id:"istighfar",go:"zikr|i|",w:0,t:"«Астагфируллах» 33 раза",d:"В автобусе, по дороге на пары, в перерыве. Считай счётчиком.",z:"i"},
+  {id:"phone",w:0,t:"Телефон в другой комнате перед сном",d:"За 30 минут до сна. Последние минуты дня — для иши и тишины, а не для ленты."},
+  {id:"night",go:"dua|night|d-routine",w:1,t:"5 минут перед сном",d:"Омовение, правый бок, аятуль-Курси, три последние суры, 33/33/34. Вкладка «Перед сном»."},
+  {id:"tahlil",go:"zikr|t|",w:1,t:"«Ля иляха илля-ллах…» 100 раз",d:"Меньше 10 минут, можно частями за день. Награда — как за 100 добрых дел и защита от шайтана до вечера.",z:"t"},
+  {id:"words",go:"dua|day|",w:2,t:"Нужные слова в нужный момент",d:"Неудача — «Кадаруллах». Злость — «А'узу билляхи…». Тяжело — «Хасбуна-ллах». Вкладка «День»."},
+  {id:"thanks",w:2,t:"Поблагодарил Аллаха в хороший момент",d:"Получилось что-то — скажи «Аль-хамду ли-ллях». Помни Аллаха не только в трудный день."},
+  {id:"secret",w:2,t:"Одно тайное доброе дело",d:"Садака, помощь, дуа за другого человека — так, чтобы не узнал никто, кроме Аллаха."},
+  {id:"quran",w:3,t:"Страница Корана с переводом",d:"Смысловой перевод Кулиева, одна страница после фаджра."},
+  {id:"pause",go:"learn|steps|",w:3,t:"30 секунд паузы перед намазом",d:"Вдох и мысль: «сейчас я встаю перед Аллахом». В поклонах не спеши."}
+];
+const ZIKR={
+  t:{n:"Ля иляха…",goal:100,ar:"لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",tr:"Ля:: иля:ха илля-лла:ху вахдаху: ля: шари:ка лях, ляху-ль-мульку ва ляху-ль-хамд, ва хува 'аля: кулли шай'ин кади:р",ru:"Нет бога, кроме Аллаха, Единого, без сотоварищей. Ему власть и хвала, и Он над всякой вещью мощен. Бухари 3293"},
+  i:{n:"Астагфируллах",goal:33,ar:"أَسْتَغْفِرُ اللَّهَ",tr:"Астагфиру-лла:х",ru:"Прошу прощения у Аллаха. Бухари 6307"},
+  s:{n:"Субхана-ллах",goal:33,ar:"سُبْحَانَ اللَّهِ",tr:"Субха:на-лла:х · затем 33 «Аль-хамду ли-лла:х» и 34 «Алла:ху акбар»",ru:"Пречист Аллах. Перед сном. Бухари 3705"}
+};
+
+/* ---------- prayer time calculation (verified against ihadis.com for 29.10.2026) ---------- */
+function calc(date){
+  const r=Math.PI/180, sin=x=>Math.sin(x*r), cos=x=>Math.cos(x*r), tan=x=>Math.tan(x*r);
+  const asin=x=>Math.asin(x)/r, acos=x=>Math.acos(Math.max(-1,Math.min(1,x)))/r, atan2=(y,x)=>Math.atan2(y,x)/r, acot=x=>Math.atan(1/x)/r;
+  const fix=(a,b)=>{a=a-b*Math.floor(a/b);return a<0?a+b:a};
+  let y=date.getFullYear(), m=date.getMonth()+1, d=date.getDate();
+  if(m<=2){y--;m+=12}
+  const A=Math.floor(y/100), B=2-A+Math.floor(A/4);
+  const jd0=Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5-LNG/(15*24);
+  const sun=jd=>{const D=jd-2451545,g=fix(357.529+0.98560028*D,360),q=fix(280.459+0.98564736*D,360),
+    L=fix(q+1.915*sin(g)+0.020*sin(2*g),360),e=23.439-0.00000036*D,RA=atan2(cos(e)*sin(L),cos(L))/15;
+    return {decl:asin(sin(e)*sin(L)),eqt:q/15-fix(RA,24)}};
+  const noon=t=>fix(12-sun(jd0+t).eqt,24);
+  const at=(ang,t,ccw)=>{const dc=sun(jd0+t).decl,n=noon(t);
+    const T=acos((-sin(ang)-sin(dc)*sin(LAT))/(cos(dc)*cos(LAT)))/15;return n+(ccw?-T:T)};
+  const asr=t=>{const dc=sun(jd0+t).decl;return at(-acot(ASR+tan(Math.abs(LAT-dc))),t)};
+  let t={fajr:5,sunrise:6,dhuhr:12,asr:13,maghrib:18,isha:18};
+  for(let i=0;i<2;i++){const p=k=>t[k]/24;
+    t={fajr:at(18,p("fajr"),1),sunrise:at(.833,p("sunrise"),1),dhuhr:noon(p("dhuhr")),
+       asr:asr(p("asr")),maghrib:at(.833,p("maghrib")),isha:at(18,p("isha"))}}
+  const adj=TZ-LNG/15, out={};
+  for(const k in t) out[k]=t[k]+adj+(k==="dhuhr"?1/60:0);
+  return out;
+}
+
+/* ---------- helpers ---------- */
+const pad=n=>String(n).padStart(2,"0");
+const key=d=>d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate());
+const fromKey=k=>{const [y,m,d]=k.split("-").map(Number);return new Date(y,m-1,d)};
+const hm=h=>{const m=Math.round(h*60);return Math.floor(m/60)%24+":"+pad(m%60)};
+const hours=d=>d.getHours()+d.getMinutes()/60+d.getSeconds()/3600;
+const dayDiff=(a,b)=>Math.round((fromKey(key(b))-fromKey(key(a)))/864e5);
+const $=id=>document.getElementById(id);
+const CHECK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+
+/* ---------- state ---------- */
+const LS="namaz-tracker-v1";
+let state={start:null,days:{},habits:{},zikr:{}};
+const norm=s=>({start:s.start||null,days:s.days||{},habits:s.habits||{},zikr:s.zikr||{}});
+try{const s=JSON.parse(localStorage.getItem(LS)||"null");if(s&&s.days)state=norm(s)}catch(e){}
+let ref=null, saving=false, dirty=false, saveTimer=null;
+function later(){clearTimeout(saveTimer);try{localStorage.setItem(LS,JSON.stringify(state))}catch(e){}saveTimer=setTimeout(()=>{saveTimer=null;persist()},1200)}
+
+function zcount(k,z){return ((state.zikr[k]||{})[z])||0}
+function habitDone(k,h){return h.z?zcount(k,h.z)>=ZIKR[h.z].goal:(state.habits[k]||[]).includes(h.id)}
+function toggleHabit(k,id){
+  if(!state.start) state.start=key(new Date());
+  const s=new Set(state.habits[k]||[]);
+  s.has(id)?s.delete(id):s.add(id);
+  state.habits[k]=[...s];
+  if(!state.habits[k].length) delete state.habits[k];
+  render();persist();
+}
+let zsel="i";
+try{const z=localStorage.getItem("namaz-zsel");if(ZIKR[z])zsel=z}catch(e){}
+function tapZikr(){
+  if(!state.start) state.start=key(new Date());
+  const k=key(new Date()), cur=Object.assign({},state.zikr[k]||{});
+  cur[zsel]=(cur[zsel]||0)+1;
+  state.zikr[k]=cur;
+  if(cur[zsel]===ZIKR[zsel].goal){toast("Готово: "+ZIKR[zsel].goal+" × "+ZIKR[zsel].n);try{navigator.vibrate&&navigator.vibrate(60)}catch(e){}}
+  renderCounter();renderHabits();later();
+}
+function resetZikr(){
+  const k=key(new Date()), cur=Object.assign({},state.zikr[k]||{});
+  delete cur[zsel];state.zikr[k]=cur;
+  if(!Object.keys(cur).length) delete state.zikr[k];
+  renderCounter();renderHabits();later();
+}
+
+function weekIndex(now){
+  const s=state.start?fromKey(state.start):now;
+  return Math.max(0,Math.floor(dayDiff(s,now)/7));
+}
+function planFor(dayDate){
+  const s=state.start?fromKey(state.start):fromKey(key(new Date()));
+  const w=Math.floor(dayDiff(s,dayDate)/7);
+  if(w<0) return [];
+  return PLAN[Math.min(w,3)].p;
+}
+function isDone(k,p){return (state.days[k]||[]).includes(p)}
+
+function toggle(k,p){
+  if(!state.start) state.start=key(new Date());
+  const list=new Set(state.days[k]||[]);
+  list.has(p)?list.delete(p):list.add(p);
+  state.days[k]=ORDER.filter(x=>list.has(x));
+  if(!state.days[k].length) delete state.days[k];
+  render();
+  persist();
+}
+
+async function persist(){
+  try{localStorage.setItem(LS,JSON.stringify(state))}catch(e){}
+  if(!ref) return;
+  if(saving){dirty=true;return}
+  saving=true;
+  do{
+    dirty=false;
+    try{await ref.set(JSON.parse(JSON.stringify(state)))}
+    catch(e){toast("Отметка не сохранилась в аккаунте. Она осталась в этом браузере.");break}
+  }while(dirty);
+  saving=false;
+}
+
+let toastTimer;
+function toast(msg){const t=$("toast");t.textContent=msg;t.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.hidden=true,3500)}
+
+/* ---------- render ---------- */
+function render(){
+  const now=new Date(), k=key(now), T=calc(now), h=hours(now);
+  const wi=Math.min(weekIndex(now),3);
+  const plan=planFor(now);
+
+  $("today").textContent=now.toLocaleDateString("ru-RU",{weekday:"long",day:"numeric",month:"long"});
+  $("weekBadge").textContent=state.start&&weekIndex(now)>3?"План пройден · держи все пять":"Неделя "+(wi+1)+" из 4";
+
+  // next prayer
+  let nx=ORDER.find(p=>T[p]>h), nxT, left;
+  if(nx){nxT=T[nx];left=nxT-h}else{nx="fajr";const tm=new Date(now);tm.setDate(tm.getDate()+1);nxT=calc(tm).fajr;left=24-h+nxT}
+  $("nextLabel").textContent="Следующий: "+NAMES[nx];
+  $("nextTime").textContent=hm(nxT);
+  const lm=Math.max(0,Math.round(left*60));
+  $("nextLeft").textContent="через "+(lm>=60?Math.floor(lm/60)+" ч ":"")+(lm%60)+" мин";
+  $("mini").innerHTML="<b>"+NAMES[nx]+" "+hm(nxT)+"</b> · "+(lm>=60?Math.floor(lm/60)+" ч ":"")+(lm%60)+" мин";
+
+  // band
+  const P=x=>(x/24*100).toFixed(2)+"%";
+  $("band").style.background="linear-gradient(90deg,var(--sky-night) 0%,var(--sky-night) "+P(T.fajr)+",var(--sky-dawn) "+P(T.sunrise)+",var(--sky-day) "+P(T.sunrise+1.2)+",var(--sky-day) "+P(T.maghrib-1.2)+",var(--sky-dawn) "+P(T.maghrib)+",var(--sky-night) "+P(T.isha)+",var(--sky-night) 100%)";
+  $("nowLine").style.left="calc("+P(h)+" - 1px)";
+  $("ticks").innerHTML=ORDER.map(p=>'<i style="left:'+P(T[p])+'">'+SHORT[p]+'<b><br>'+hm(T[p])+'</b></i>').join("");
+
+  // today list
+  const ends={fajr:T.sunrise,dhuhr:T.asr,asr:T.maghrib,maghrib:T.isha,isha:24};
+  $("prayers").innerHTML=ORDER.map(p=>{
+    const done=isDone(k,p), inPlan=plan.includes(p);
+    const cur=h>=T[p]&&h<ends[p];
+    const past=h>=ends[p];
+    let tag="";
+    if(cur) tag='<span class="tag now">сейчас</span>';
+    else if(past&&!done&&inPlan&&p!=="isha") tag='<span class="tag late">время вышло, восполни</span>';
+    const firstWeek=PLAN.findIndex(s=>s.p.includes(p))+1;
+    const planNote=inPlan?"":'<span>по плану с недели '+firstWeek+'</span>';
+    const win=p==="fajr"?hm(T.fajr)+"–"+hm(T.sunrise):p==="isha"?"с "+hm(T.isha)+", лучше до полуночи":hm(T[p])+"–"+hm(ends[p]);
+    return '<li class="prayer'+(cur?" current":"")+(inPlan||done?"":" off")+'">'+
+      '<div><div class="p-name"><strong>'+NAMES[p]+'</strong><span class="ar" lang="ar">'+AR[p]+'</span>'+tag+'</div>'+
+      '<div class="p-sub num"><span>'+win+'</span><span>'+RAK_SHORT[p]+'</span>'+planNote+'</div></div>'+
+      '<button class="check" id="chk-'+p+'" data-k="'+k+'" data-p="'+p+'" aria-pressed="'+done+'" aria-label="'+NAMES[p]+(done?": совершён":": отметить")+'">'+CHECK+'</button></li>';
+  }).join("");
+  const dn=(state.days[k]||[]).length;
+  $("todayCount").textContent=dn+" из 5 · по плану "+plan.length;
+
+  // week grid (Mon..Sun)
+  const mon=new Date(now);mon.setDate(now.getDate()-((now.getDay()+6)%7));
+  const days=[...Array(7)].map((_,i)=>{const d=new Date(mon);d.setDate(mon.getDate()+i);return d});
+  const DN=["Пн","Вт","Ср","Чт","Пт","Сб","Вс"];
+  let html='<span></span>'+days.map((d,i)=>'<span class="h'+(key(d)===k?" today":"")+'">'+DN[i]+'<br>'+d.getDate()+'</span>').join("");
+  let wDone=0, wPlan=0;
+  ORDER.forEach(p=>{
+    html+='<span class="rl">'+NAMES[p]+'</span>';
+    days.forEach(d=>{
+      const dk=key(d), fut=d>now&&dk!==k, on=isDone(dk,p), pl=planFor(d).includes(p);
+      if(on) wDone++; if(pl&&!fut) wPlan++;
+      html+='<button class="dot'+(on?" on":"")+(pl?" plan":"")+'" data-k="'+dk+'" data-p="'+p+'" '+(fut?"disabled ":"")+
+        'aria-pressed="'+on+'" aria-label="'+NAMES[p]+", "+d.toLocaleDateString("ru-RU",{day:"numeric",month:"long"})+'"></button>';
+    });
+  });
+  $("week").innerHTML=html;
+  $("weekCount").textContent=wDone+" отмечено · по плану до сегодня "+wPlan;
+
+  // plan
+  $("steps").innerHTML=PLAN.map((s,i)=>'<li class="step'+(i<wi?" done":i===wi?" active":" later")+'"><span class="w">'+(i+1)+'</span><div><strong>'+s.t+(i>wi?' <span class="tag">с недели '+(i+1)+'</span>':'')+'</strong><p>'+s.d+'</p>'+plinks(PLINKS[i])+'</div></li>').join("");
+  $("startLabel").textContent=state.start?"старт "+fromKey(state.start).toLocaleDateString("ru-RU",{day:"numeric",month:"long"}):"начнётся с первой отметки";
+  renderRestart();
+  renderHabits();
+  renderCounter();
+  renderStart();
+  renderNow();
+}
+
+function renderHabits(){
+  const now=new Date(), k=key(now), wi=Math.min(weekIndex(now),3);
+  const act=HABITS.filter(h=>h.w<=wi);
+  $("habits").innerHTML=act.map(h=>{
+    const done=habitDone(k,h);
+    const tag=h.w===wi&&wi>0?'<span class="tag new">новое</span>':"";
+    const ctl=h.z
+      ?'<span class="prog num">'+Math.min(zcount(k,h.z),ZIKR[h.z].goal)+'/'+ZIKR[h.z].goal+'</span>'
+      :'<button class="check" id="hb-'+h.id+'" data-hk="'+k+'" data-h="'+h.id+'" aria-pressed="'+done+'" aria-label="'+esc(h.t)+(done?": сделано":": отметить")+'">'+CHECK+'</button>';
+    return '<li class="prayer habit'+(done?" current":"")+'"><div><div class="p-name"><strong>'+esc(h.t)+'</strong>'+tag+'</div><div class="p-sub">'+esc(h.d)+(h.go?' <a href="#'+h.go.split('|')[0]+'" data-go="'+h.go+'">Открыть →</a>':'')+'</div></div>'+ctl+'</li>';
+  }).join("");
+  const n=act.filter(h=>habitDone(k,h)).length;
+  $("habitCount").textContent=n+" из "+act.length;
+  const next=HABITS.filter(h=>h.w===wi+1);
+  const soon=$("soon");
+  if(next.length){soon.hidden=false;soon.textContent="С недели "+(wi+2)+" добавится: "+next.map(h=>h.t.charAt(0).toLowerCase()+h.t.slice(1)).join("; ")+". Пока не добавляй — сначала закрепи то, что есть."}
+  else soon.hidden=true;
+}
+
+function renderCounter(){renderCounter0();decorateZikr()}
+function renderCounter0(){
+  const k=key(new Date()), z=ZIKR[zsel], n=zcount(k,zsel), full=n>=z.goal;
+  $("zchips").innerHTML=Object.keys(ZIKR).map(id=>'<button class="tab" role="tab" id="z-'+id+'" data-z="'+id+'" aria-selected="'+(id===zsel)+'">'+ZIKR[id].n+'</button>').join("");
+  const C=2*Math.PI*46, frac=Math.min(1,n/z.goal);
+  $("counter").innerHTML='<div class="ar" lang="ar">'+z.ar+'</div><div class="tr">«'+mark(z.tr)+'»<br>'+esc(z.ru)+'</div>'+
+    '<button class="tap'+(full?" full":"")+'" id="tap" aria-label="Плюс один, сейчас '+n+' из '+z.goal+'">'+
+    '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="var(--line)" stroke-width="3"/><circle cx="50" cy="50" r="46" fill="none" stroke="'+(full?"var(--accent-ink)":"var(--accent)")+'" stroke-width="3" stroke-linecap="round" stroke-dasharray="'+C.toFixed(1)+'" stroke-dashoffset="'+(C*(1-frac)).toFixed(1)+'"/></svg>'+
+    '<span><span class="n num">'+n+'</span><br><span class="of num">из '+z.goal+(full?" · готово":" · нажимай")+'</span></span></button>'+
+    '<button class="btn" id="zreset">Сбросить этот счётчик</button>';
+}
+
+let startHidden=false;
+try{startHidden=localStorage.getItem("namaz-start-hidden")==="1"}catch(e){}
+function renderStart(){
+  const el=$("startPanel"), now=new Date();
+  const day=state.start?dayDiff(fromKey(state.start),now):-1;
+  if(startHidden){el.hidden=true;return}
+  el.hidden=false;
+  el.innerHTML='<div class="panel-head"><h2>С чего начать: первые сутки</h2>'+'<button class="btn" id="hideStart">Скрыть</button>'+'</div>'+
+  '<ol class="start-steps">'+
+  '<li><div><div class="when">Сегодня вечером, 2 минуты</div><strong>Поставь будильник на 6:30</strong><p>Фаджр можно совершить до восхода, а восход сейчас около 7:00. Будильник на 7:00 уже поздно.</p></div></li>'+
+  '<li><div><div class="when">Сегодня вечером, 10 минут</div><strong>Прочитай один раз «Омовение» и «Намаз по шагам»</strong><p>Раздел «Учёба» внизу экрана → <a href="#learn">«Как совершать намаз»</a>. Если аль-Фатиху ещё не помнишь наизусть, начни учить её первой — по строке в день.</p></div></li>'+
+  '<li><div><div class="when">Перед сном</div><strong>Телефон в другую комнату</strong><p>Так проще уснуть вовремя и проснуться на фаджр.</p></div></li>'+
+  '<li><div><div class="when">Утром</div><strong>Омовение → 2 раката фаджра → дуа при пробуждении</strong><p>Отметь фаджр в «Намазах сегодня» и пункты в «Привычках». Всё, больше утром ничего не надо.</p></div></li>'+
+  '<li><div><div class="when">Вечером, после 18:30</div><strong>Иша: 4 раката фарда</strong><p>Витр (3 раката) добавишь, когда выучишь дуа «Кунут» — спроси имама.</p></div></li>'+
+  '</ol>'+
+  '<div class="rules"><div><b>Мало, но каждый день</b>Делай только то, что в плане недели. Новое добавляется само.</div><div><b>Пропустил — не бросай</b>Восполни намаз, как вспомнил, и продолжай. Одна осечка ничего не ломает.</div><div><b>Сначала научись</b>Один раз помолись рядом с имамом в мечети — он поправит.</div></div>';
+}
+
+let confirmRestart=false;
+function renderRestart(){
+  const el=$("restart");
+  if(!state.start){el.innerHTML="";return}
+  el.innerHTML=confirmRestart
+    ?'<span>Начать план с сегодняшнего дня? Отметки останутся.</span><button class="btn danger" id="rs-yes">Да, с сегодня</button><button class="btn" id="rs-no">Отмена</button>'
+    :'<button class="btn" id="rs-ask">Начать план заново</button>';
+}
+
+/* ---------- duas ---------- */
+const DUAS={
+  morning:[
+    {w:"Проснулся",ar:"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",tr:"Аль-хамду ли-лла:хи-ллязи:: ахйа:на: ба'да ма:: ама:тана: ва иляйхи-н-нушу:р",ru:"Хвала Аллаху, Который оживил нас после того, как умертвил, и к Нему воскрешение.",src:"Бухари 6312"},
+    {w:"Сразу после — от лени и тревоги",ar:"اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْبُخْلِ وَالْجُبْنِ، وَضَلَعِ الدَّيْنِ وَغَلَبَةِ الرِّجَالِ",tr:"Алла:хумма инни:: а'у:зу бика мина-ль-хамми ва-ль-хазан, ва-ль-'аджзи ва-ль-касаль, ва-ль-бухли ва-ль-джубн, ва дала'и-д-дайни ва галябати-р-риджа:ль",ru:"О Аллах, прибегаю к Тебе от тревоги и печали, от бессилия и лени, от скупости и трусости, от бремени долгов и от притеснения людей. Пророк ﷺ говорил эту дуа постоянно.",src:"Бухари 6363"},
+    {w:"После фаджра — своя дуа",ar:"رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",tr:"Раббана:: а:тина: фи-д-дунья: хасанатан ва фи-ль-а:хырати хасанатан ва кына: 'аза:ба-н-на:р",ru:"Господь наш, даруй нам благо в этой жизни и благо в вечной и защити нас от огня. Дальше проси своими словами, например: «О Аллах, прости мои грехи, помоги держаться намаза, дай силы, знания и халяльную работу программистом. Амин».",src:"Коран 2:201"},
+    {w:"В свободную минуту",ar:"أَسْتَغْفِرُ اللَّهَ",tr:"Астагфиру-лла:х",ru:"Прошу прощения у Аллаха. Пророк ﷺ просил прощения больше 70 раз в день.",src:"Бухари 6307"}
+  ],
+  day:[
+    {w:"Что-то пошло не так",ar:"قَدَرُ اللَّهِ وَمَا شَاءَ فَعَلَ",tr:"Кадару-лла:хи ва ма: ша::'а фа'аль",ru:"Так предопределил Аллах, и Он сделал, что пожелал. Не говори «если бы я…».",src:"Муслим 2664"},
+    {w:"Злишься",ar:"أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",tr:"А'у:зу би-лла:хи мина-ш-шайта:ни-р-раджи:м",ru:"Прибегаю к Аллаху от проклятого шайтана.",src:"Бухари 6115"},
+    {w:"Тяжело, не вывожу",ar:"حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",tr:"Хасбуна-ллаху ва ни'маль-вакиль",ru:"Достаточно нам Аллаха, и как прекрасен Он как Покровитель.",src:"Коран 3:173 · Бухари 4563"}
+  ],
+  night:[
+    {routine:true},
+    {w:"На правом боку",ar:"اللَّهُمَّ أَسْلَمْتُ وَجْهِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لَا مَلْجَأَ وَلَا مَنْجَا مِنْكَ إِلَّا إِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ",tr:"Алла:хумма аслямту ваджхи:: иляйк, ва фаввадту амри:: иляйк, ва альджа'ту захри:: иляйк, рагбатан ва рахбатан иляйк, ля: мальджа'а ва ля: манджа: минка илля:: иляйк, а:манту би-кита:бика-ллязи:: анзальта, ва би-набиййика-ллязи:: арсальт",ru:"О Аллах, я обратил к Тебе лицо, вверил Тебе свои дела и положился на Тебя, с надеждой и страхом перед Тобой. Нет убежища и спасения от Тебя, кроме как у Тебя. Я уверовал в Твоё Писание, которое Ты ниспослал, и в Твоего Пророка, которого Ты послал.",src:"Бухари 247",wide:true},
+    {w:"Пока не выучил длинное",ar:"بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",tr:"Бисмика-лла:хумма аму:ту ва ахйа:",ru:"С Твоим именем, о Аллах, я умираю и оживаю.",src:"Бухари 6324"}
+  ]
+};
+const TABS=[["morning","Утро"],["day","День"],["night","Перед сном"]];
+let tab="morning";
+try{const t=localStorage.getItem("namaz-tab");if(t&&DUAS[t])tab=t}catch(e){}
+const LEG='<div class="leg">Как читать: а — коротко · <span class="lv">аа</span> — тянуть вдвое дольше · <span class="xl">ааа</span> — тянуть ещё дольше (4–6 счётов) · лл, бб — двойную согласную произнеси с задержкой · \' — гортанный звук, ставь на слух</div>';
+const VEXT={"а":"а","я":"а","о":"о","ё":"о","у":"у","ю":"у","ы":"ы","и":"и","э":"э","е":"э"};
+function unhyph(t){return t.replace(/-([а-яё]{1,2})-(?=\1)/giu,'$1 ').replace(/-ль-/g,'ль ').replace(/(\S)-(?=\S)/g,'$1')}
+function mark(t){return esc(unhyph(t)).replace(/([аеёиоуыэюяАЕЁИОУЫЭЮЯ])(::?)/g,(m,v,c)=>{const n=c.length===2?2:1;return '<span class="'+(n===2?"xl":"lv")+'">'+v+VEXT[v.toLowerCase()].repeat(n)+'</span>'})}
+function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function renderDuas(){renderDuas0();decorateDuas()}
+function renderDuas0(){
+  $("tabs").innerHTML=TABS.map(([id,l])=>'<button class="tab" role="tab" id="tab-'+id+'" data-tab="'+id+'" aria-selected="'+(id===tab)+'">'+l+'</button>').join("");
+  $("duas").innerHTML=DUAS[tab].map(d=>d.routine
+    ?'<article class="dua"><div class="when">5 минут перед сном</div><ol class="routine">'+
+      '<li>Вуду, как перед намазом. <span class="src">Бухари 247</span></li>'+
+      '<li>Лечь на правый бок и сказать дуа. <span class="src">Бухари 247</span></li>'+
+      '<li>Аятуль-Курси (Коран 2:255). Учи по аудио, по фразе в день. <span class="src">Бухари 2311</span></li>'+
+      '<li>Подуть в ладони, прочитать аль-Ихляс, аль-Фаляк, ан-Нас и протереть тело с головы. Три раза. <span class="src">Бухари 5017</span></li>'+
+      '<li>33 × «Субхана-ллах», 33 × «Аль-хамду ли-ллях», 34 × «Аллаху акбар». <span class="src">Бухари 3705</span></li></ol></article>'
+    :'<article class="dua'+(d.wide?" wide":"")+'"><div class="when">'+esc(d.w)+'</div><div class="ar" lang="ar">'+d.ar+'</div><div class="tr">«'+mark(d.tr)+'»</div><div class="ru">'+esc(d.ru)+'</div><div class="src">'+esc(d.src)+'</div></article>'
+  ).join("");
+}
+
+/* ---------- beginner guide ---------- */
+const RAK_SHORT={fajr:"фард 2 раката",dhuhr:"фард 4 раката",asr:"фард 4 раката",maghrib:"фард 3 раката",isha:"фард 4 + витр 3"};
+const say=(ar,tr,ru)=>'<span class="say">'+(ar?'<span class="ar" lang="ar">'+ar+'</span>':'')+'<b>«'+mark(tr)+'»</b>'+(ru?'<br><span style="color:var(--muted)">'+ru+'</span>':'')+'</span>';
+const GUIDE={
+  rak:{t:"Ракаты",h:
+    '<p class="lead">Ракат — один круг движений: стояние, поясной поклон, два земных поклона. В каждом намазе разное число ракатов. <b>Фард</b> — обязательная часть. <b>Сунна</b> — то, что делал Пророк ﷺ сверх обязательного. Новичку достаточно начать с фарда, сунну добавишь, когда привыкнешь.</p>'+
+    '<div class="scroll"><table class="rak num"><thead><tr><th>Намаз</th><th>Порядок</th><th>Если только обязательное</th></tr></thead><tbody>'+
+    '<tr><td>Фаджр</td><td>2 сунна → <span class="f">2 фард</span></td><td class="f">2</td></tr>'+
+    '<tr><td>Зухр</td><td>4 сунна → <span class="f">4 фард</span> → 2 сунна</td><td class="f">4</td></tr>'+
+    '<tr><td>Аср</td><td>(4 сунна, желательно) → <span class="f">4 фард</span></td><td class="f">4</td></tr>'+
+    '<tr><td>Магриб</td><td><span class="f">3 фард</span> → 2 сунна</td><td class="f">3</td></tr>'+
+    '<tr><td>Иша</td><td>(4 сунна, желательно) → <span class="f">4 фард</span> → 2 сунна → <span class="f">3 витр</span></td><td class="f">4 + 3 витр</td></tr>'+
+    '</tbody></table></div>'+
+    '<div class="note">Витр по ханафитскому мазхабу ваджиб, то есть почти обязателен. Его читают после иши, в третьем ракате перед поясным поклоном добавляют дуа «Кунут». Пока не выучил кунут, спроси имама, как быть.</div>'+
+    '<dl class="terms"><div><dt>Кибла</dt><dd>Направление на Каабу в Мекке. Из Пензы это почти точно на юг (около 189° по компасу).</dd></div><div><dt>Такбир</dt><dd>Слова «Аллаху акбар» — «Аллах велик».</dd></div><div><dt>Руку\'</dt><dd>Поясной поклон, руки на коленях, спина ровная.</dd></div><div><dt>Суджуд</dt><dd>Земной поклон: лоб, нос, ладони, колени и пальцы ног касаются пола.</dd></div><div><dt>Ташаххуд</dt><dd>Сидение с чтением «Ат-тахийяту…».</dd></div><div><dt>Ният</dt><dd>Намерение в сердце: какой намаз совершаешь. Вслух говорить не обязательно.</dd></div></dl>'},
+  wudu:{t:"Омовение",h:
+    '<p class="lead">Без омовения (вуду) намаз не принимается. Перед каждым намазом проверь, не нарушилось ли оно. Делай по порядку, правую сторону раньше левой.</p>'+
+    '<ol class="howto">'+
+    '<li><b>Намерение и «Бисмиллях».</b> В сердце: «совершаю омовение ради Аллаха». Вслух: «Бисми-ллях».</li>'+
+    '<li><b>Кисти рук</b> до запястий, 3 раза, промой между пальцами.</li>'+
+    '<li><b>Рот</b> — набери воды и прополощи, 3 раза.</li>'+
+    '<li><b>Нос</b> — втяни воду правой рукой, высморкайся левой, 3 раза.</li>'+
+    '<li><b>Лицо</b> целиком: от линии волос до подбородка, от уха до уха, 3 раза. <i>Обязательно.</i></li>'+
+    '<li><b>Руки до локтей включительно</b>, сначала правую, потом левую, по 3 раза. <i>Обязательно.</i></li>'+
+    '<li><b>Голова</b> — проведи мокрыми ладонями по волосам ото лба к затылку, 1 раз. <i>Обязательно (хотя бы четверть головы).</i></li>'+
+    '<li><b>Уши</b> — указательными пальцами внутри, большими снаружи, 1 раз. Затем тыльной стороной пальцев проведи по шее.</li>'+
+    '<li><b>Ноги до щиколоток включительно</b>, сначала правую, потом левую, по 3 раза, промой между пальцами. <i>Обязательно.</i></li>'+
+    '</ol>'+
+    '<div class="note"><b>Омовение нарушают:</b> туалет, выход газов, сон лёжа или с опорой, потеря сознания. По ханафитскому мазхабу ещё кровь или гной, вытекшие из раны. После нарушения омовение нужно сделать заново.</div>'},
+  gusl:{t:"Гусль",h:
+    '<p class="lead"><b>Гусль</b> — полное омовение всего тела. Без него намаз недействителен, если было то, что его требует. Обычный душ подходит, если сделать всё по порядку и с намерением.</p>'+
+    '<div class="note"><b>Когда гусль обязателен:</b> после семяизвержения (наяву или во сне, если проснулся и видишь следы), после близости с женой. У женщин ещё после месячных и послеродового периода.</div>'+
+    '<ol class="howto">'+
+    '<li><b>Намерение.</b> В сердце: «совершаю гусль, чтобы очиститься ради Аллаха». Затем «Бисми-ллях».</li>'+
+    '<li><b>Вымой кисти рук</b> 3 раза.</li>'+
+    '<li><b>Вымой интимные места</b> и смой с тела всё нечистое.</li>'+
+    '<li><b>Сделай обычное вуду</b>, как перед намазом (вкладка «Омовение»). Ноги можно помыть в конце.</li>'+
+    '<li><b>Прополощи рот</b> так, чтобы вода дошла до всех мест. <i>Обязательно по ханафитскому мазхабу.</i></li>'+
+    '<li><b>Промой нос</b>, втянув воду. <i>Обязательно по ханафитскому мазхабу.</i></li>'+
+    '<li><b>Облей голову 3 раза</b>, чтобы вода дошла до корней волос.</li>'+
+    '<li><b>Облей правую сторону тела</b> 3 раза, затем <b>левую</b> 3 раза. <i>Обязательно, чтобы вода покрыла всё тело.</i></li>'+
+    '<li><b>Проверь места, которые легко пропустить:</b> пупок, уши и за ушами, подмышки, между пальцами рук и ног, под коленями.</li>'+
+    '</ol>'+
+    '<div class="note">Если в гусле сделал вуду и после ничего его не нарушило, можно сразу совершать намаз — отдельное омовение не нужно.</div>'},
+  steps:{t:"Намаз по шагам",h:
+    '<p class="lead">Ниже двухракатный намаз, например фард фаджра. Всё, что в рамке, говоришь про себя (губами, но тихо). Порядок ханафитский, для мужчин.</p>'+
+    '<ol class="howto">'+
+    '<li><b>Встань лицом к кибле</b> (из Пензы — на юг), ноги на ширине ладони. Сделай ният: «совершаю 2 раката фарда утреннего намаза ради Аллаха».</li>'+
+    '<li><b>Начальный такбир.</b> Подними ладони к ушам, большие пальцы касаются мочек, и скажи:'+say("اللَّهُ أَكْبَرُ","Алла:ху акбар","Аллах велик")+'Положи правую руку на левую чуть ниже пупка.</li>'+
+    '<li><b>Сана</b> (вступительная хвала):'+say("سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَٰهَ غَيْرُكَ","Субха:нака-лла:хумма ва би-хамдик, ва таба:рака-смук, ва та\'а:ля: джаддук, ва ля: иля:ха гайрук","Пречист Ты, о Аллах, и хвала Тебе. Благословенно Твоё имя, превыше всего Твоё величие, и нет бога, кроме Тебя.")+'</li>'+
+    '<li><b>«А\'узу» и «Бисмиллях»</b>, затем <b>сура аль-Фатиха</b> и после неё «Амин» про себя. Тексты во вкладке «Тексты».</li>'+
+    '<li><b>Короткая сура</b>, например аль-Ихлас.</li>'+
+    '<li><b>Поясной поклон.</b> Со словами «Аллаху акбар» наклонись, ладони на колени, спина ровная. Три раза:'+say("سُبْحَانَ رَبِّيَ الْعَظِيمِ","Субха:на раббияль-\'азы:м","Пречист мой Великий Господь")+'</li>'+
+    '<li><b>Выпрямись</b>, говоря:'+say("سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ","Сами\'а-лла:ху лиман хамидах","Аллах слышит того, кто Его восхваляет")+'Стоя:'+say("رَبَّنَا وَلَكَ الْحَمْدُ","Раббана: ва ляка-ль-хамд","Господь наш, Тебе хвала")+'</li>'+
+    '<li><b>Земной поклон.</b> Со словами «Аллаху акбар» опустись: сначала колени, потом ладони, потом нос и лоб. Три раза:'+say("سُبْحَانَ رَبِّيَ الْأَعْلَىٰ","Субха:на раббияль-а\'ля:","Пречист мой Всевышний Господь")+'</li>'+
+    '<li><b>Сядь</b> со словами «Аллаху акбар» на секунду, затем <b>второй земной поклон</b> так же. Это конец первого раката.</li>'+
+    '<li><b>Второй ракат.</b> Встань со словами «Аллаху акбар». Сана уже не нужна: «Бисмиллях», аль-Фатиха, короткая сура, поясной поклон, два земных — всё как в первом.</li>'+
+    '<li><b>Сидение.</b> После второго земного поклона сядь на левую стопу, правую поставь на пальцы. Прочитай ташаххуд, затем салават (оба во вкладке «Тексты»).</li>'+
+    '<li><b>Салям.</b> Поверни голову направо, потом налево, каждый раз говоря:'+say("السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ","Ас-саля:му \'аляйкум ва рахмату-лла:х","Мир вам и милость Аллаха")+'Намаз окончен.</li>'+
+    '</ol>'+
+    '<div class="note"><b>Если ракатов 3 или 4</b> (магриб, зухр, аср, иша): после второго раката сядь, прочитай только ташаххуд и встань на третий ракат. В третьем и четвёртом ракатах фарда читается только аль-Фатиха, без второй суры. Салават и салям — в последнем сидении.</div>'+
+    '<div class="note">Лучше всего один раз совершить намаз рядом с имамом в мечети: он увидит и поправит то, что текстом не объяснить.</div>'},
+  texts:{t:"Тексты",h:
+    '<p class="lead">Учи по одной строке в день, слушая аудио чтеца. Пока не выучил аль-Фатиху, спроси имама, как совершать намаз в это время.</p>'+
+    '<ol class="howto">'+
+    '<li><b>А\'узу и Бисмиллях</b> (перед аль-Фатихой)'+say("أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ  ·  بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","А\'у:зу би-лла:хи мина-ш-шайта:ни-р-раджи:м. Бисми-лла:хи-р-рахма:ни-р-рахи:м","Прибегаю к Аллаху от проклятого шайтана. С именем Аллаха, Милостивого, Милосердного.")+'</li>'+
+    '<li><b>Сура аль-Фатиха</b> (1-я сура, в каждом ракате)'+say("الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ  ·  الرَّحْمَٰنِ الرَّحِيمِ  ·  مَالِكِ يَوْمِ الدِّينِ  ·  إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ  ·  اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ  ·  صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ","Аль-хамду ли-лла:хи рабби-ль-\'а:лями:н. Ар-рахма:ни-р-рахи:м. Ма:лики йауми-д-ди:н. Иййа:ка на\'буду ва иййа:ка наста\'и:н. Ихдина-с-сыра:та-ль-мустаки:м. Сыра:та-ллязи:на ан\'амта \'аляйхим, гайри-ль-магду:би \'аляйхим ва ля-д-да::лли:н","Хвала Аллаху, Господу миров, Милостивому, Милосердному, Властелину Дня воздаяния! Тебе одному мы поклоняемся и Тебя одного молим о помощи. Веди нас прямым путём, путём тех, кого Ты облагодетельствовал, не тех, на кого пал гнев, и не заблудших.")+'</li>'+
+    '<li><b>Сура аль-Ихлас</b> (112-я, как короткая сура)'+say("قُلْ هُوَ اللَّهُ أَحَدٌ  ·  اللَّهُ الصَّمَدُ  ·  لَمْ يَلِدْ وَلَمْ يُولَدْ  ·  وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ","Куль хува-лла:ху ахад. Алла:ху-с-самад. Лям ялид ва лям ю:ляд. Ва лям якун ляху: куфуван ахад","Скажи: «Он — Аллах Единый, Аллах Самодостаточный. Он не родил и не был рождён, и нет никого, равного Ему».")+'</li>'+
+    '<li><b>Ташаххуд</b> (в каждом сидении)'+say("التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ","Ат-тахиййа:ту ли-лла:хи ва-с-салява:ту ва-т-таййиба:т. Ас-саля:му \'аляйка аййюха-н-набиййу ва рахмату-лла:хи ва барака:тух. Ас-саля:му \'аляйна: ва \'аля: \'иба:ди-лла:хи-с-са:лихи:н. Ашхаду ан ля:: иля:ха илля-лла:х, ва ашхаду анна Мухаммадан \'абдуху: ва расу:люх","Приветствия, молитвы и благие слова — Аллаху. Мир тебе, о Пророк, милость Аллаха и Его благословения. Мир нам и праведным рабам Аллаха. Свидетельствую, что нет бога, кроме Аллаха, и свидетельствую, что Мухаммад — Его раб и посланник.")+'</li>'+
+    '<li><b>Салават</b> (в последнем сидении, после ташаххуда)'+say("اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ  ·  اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ","Алла:хумма салли \'аля: Мухаммадин ва \'аля:: а:ли Мухаммад, кама: салляйта \'аля:: Ибра:хи:ма ва \'аля:: а:ли Ибра:хи:м, иннака хами:дун маджи:д. Алла:хумма ба:рик \'аля: Мухаммадин ва \'аля:: а:ли Мухаммад, кама: ба:ракта \'аля:: Ибра:хи:ма ва \'аля:: а:ли Ибра:хи:м, иннака хами:дун маджи:д","О Аллах, благослови Мухаммада и семью Мухаммада, как Ты благословил Ибрахима и семью Ибрахима. Поистине, Ты Достойный хвалы, Славный.")+'</li>'+
+    '</ol>'}
+};
+const GT=[["rak","Ракаты"],["wudu","Омовение"],["gusl","Гусль"],["steps","Намаз по шагам"],["texts","Тексты"]];
+let gtab="steps";
+try{const t=localStorage.getItem("namaz-gtab");if(t&&GUIDE[t])gtab=t}catch(e){}
+function renderGuide(){
+  $("gtabs").innerHTML=GT.map(([id,l])=>'<button class="tab" role="tab" id="gtab-'+id+'" data-gtab="'+id+'" aria-selected="'+(id===gtab)+'">'+l+'</button>').join("");
+  $("gbody").innerHTML=(gtab==="steps"||gtab==="texts"?LEG:"")+GUIDE[gtab].h;
+}
+
+/* ---------- practice mode (Hanafi fard, men) ---------- */
+const RAKATS={fajr:2,dhuhr:4,asr:4,maghrib:3,isha:4};
+const TX={
+  takbir:["اللَّهُ أَكْبَرُ","Алла:ху акбар","Аллах велик"],
+  sana:["سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَٰهَ غَيْرُكَ","Субха:нака-лла:хумма ва би-хамдик, ва таба:рака-смук, ва та'а:ля: джаддук, ва ля: иля:ха гайрук","Пречист Ты, о Аллах, и хвала Тебе. Благословенно Твоё имя, превыше всего Твоё величие, и нет бога, кроме Тебя."],
+  auzu:["أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ  ·  بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","А'у:зу би-лла:хи мина-ш-шайта:ни-р-раджи:м. Бисми-лла:хи-р-рахма:ни-р-рахи:м","Прибегаю к Аллаху от проклятого шайтана. С именем Аллаха, Милостивого, Милосердного."],
+  bism:["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","Бисми-лла:хи-р-рахма:ни-р-рахи:м","С именем Аллаха, Милостивого, Милосердного."],
+  fatiha:["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ  ·  الرَّحْمَٰنِ الرَّحِيمِ  ·  مَالِكِ يَوْمِ الدِّينِ  ·  إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ  ·  اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ  ·  صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ","Аль-хамду ли-лла:хи рабби-ль-'а:лями:н. Ар-рахма:ни-р-рахи:м. Ма:лики йауми-д-ди:н. Иййа:ка на'буду ва иййа:ка наста'и:н. Ихдина-с-сыра:та-ль-мустаки:м. Сыра:та-ллязи:на ан'амта 'аляйхим, гайри-ль-магду:би 'аляйхим ва ля-д-да::лли:н. (А:ми:н — про себя)","Хвала Аллаху, Господу миров, Милостивому, Милосердному, Властелину Дня воздаяния! Тебе одному мы поклоняемся и Тебя одного молим о помощи. Веди нас прямым путём, путём тех, кого Ты облагодетельствовал, не тех, на кого пал гнев, и не заблудших."],
+  kawthar:["إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ  ·  فَصَلِّ لِرَبِّكَ وَانْحَرْ  ·  إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ","Инна:: а'тайна:ка-ль-каусар. Фа-салли ли-раббика ва-нхар. Инна ша:ни'ака хува-ль-абтар","Мы даровали тебе аль-Каусар. Поэтому молись Господу и закалывай жертву. Твой ненавистник сам останется без потомства. (Сура 108)"],
+  ikhlas:["قُلْ هُوَ اللَّهُ أَحَدٌ  ·  اللَّهُ الصَّمَدُ  ·  لَمْ يَلِدْ وَلَمْ يُولَدْ  ·  وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ","Куль хува-лла:ху ахад. Алла:ху-с-самад. Лям ялид ва лям ю:ляд. Ва лям якун ляху: куфуван ахад","Скажи: «Он — Аллах Единый, Аллах Самодостаточный. Он не родил и не был рождён, и нет никого, равного Ему». (Сура 112)"],
+  ruku:["سُبْحَانَ رَبِّيَ الْعَظِيمِ","Субха:на раббияль-'азы:м","Пречист мой Великий Господь"],
+  rise:["سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ  ·  رَبَّنَا وَلَكَ الْحَمْدُ","Сами'а-лла:ху лиман хамидах… (выпрямившись) Раббана: ва ляка-ль-хамд","Аллах слышит того, кто Его восхваляет. Господь наш, Тебе хвала."],
+  sujud:["سُبْحَانَ رَبِّيَ الْأَعْلَىٰ","Субха:на раббияль-а'ля:","Пречист мой Всевышний Господь"],
+  tash:["التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ","Ат-тахиййа:ту ли-лла:хи ва-с-салява:ту ва-т-таййиба:т. Ас-саля:му 'аляйка аййюха-н-набиййу ва рахмату-лла:хи ва барака:тух. Ас-саля:му 'аляйна: ва 'аля: 'иба:ди-лла:хи-с-са:лихи:н. Ашхаду ан ля:: иля:ха илля-лла:х, ва ашхаду анна Мухаммадан 'абдуху: ва расу:люх","Приветствия, молитвы и благие слова — Аллаху. Мир тебе, о Пророк, милость Аллаха и Его благословения. Мир нам и праведным рабам Аллаха. Свидетельствую, что нет бога, кроме Аллаха, и что Мухаммад — Его раб и посланник."],
+  salawat:["اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ  ·  اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ","Алла:хумма салли 'аля: Мухаммадин ва 'аля:: а:ли Мухаммад, кама: салляйта 'аля:: Ибра:хи:ма ва 'аля:: а:ли Ибра:хи:м, иннака хами:дун маджи:д. Алла:хумма ба:рик 'аля: Мухаммадин ва 'аля:: а:ли Мухаммад, кама: ба:ракта 'аля:: Ибра:хи:ма ва 'аля:: а:ли Ибра:хи:м, иннака хами:дун маджи:д","О Аллах, благослови Мухаммада и семью Мухаммада, как Ты благословил Ибрахима и семью Ибрахима. Поистине, Ты Достойный хвалы, Славный."],
+  rabbana:["رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ","Раббана:: а:тина: фи-д-дунья: хасанатан ва фи-ль-а:хырати хасанатан ва кына: 'аза:ба-н-на:р","Господь наш, даруй нам благо в этой жизни и благо в вечной и защити нас от огня."],
+  salam:["السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ","Ас-саля:му 'аляйкум ва рахмату-лла:х","Мир вам и милость Аллаха"]
+};
+function buildSteps(p){
+  const n=RAKATS[p], S=[];
+  const add=(r,pose,t,tx,dur,o)=>S.push(Object.assign({r,pose,t,k:tx,tx:tx?TX[tx]:null,dur},o||{}));
+  add(1,"Стоя","Ният — намерение",null,6,{note:"Встань лицом к кибле (из Пензы — на юг). В сердце: «Совершаю "+n+" "+(n===2?"раката":"раката")+" фарда намаза "+NAMES[p].toLowerCase()+" ради Аллаха»."});
+  for(let r=1;r<=n;r++){
+    if(r===1){
+      add(r,"Стоя","Начальный такбир","takbir",5,{note:"Подними ладони к ушам, большие пальцы у мочек. Затем правая рука на левую, ниже пупка."});
+      add(r,"Стоя","Сана","sana",11);
+      add(r,"Стоя","А'узу и Бисмиллях","auzu",8);
+    }else{
+      add(r,"Стоя","Бисмиллях","bism",4);
+    }
+    add(r,"Стоя","Сура аль-Фатиха","fatiha",30);
+    if(r===1) add(r,"Стоя","Короткая сура: аль-Каусар","kawthar",10);
+    if(r===2) add(r,"Стоя","Короткая сура: аль-Ихлас","ikhlas",10);
+    add(r,"Поясной поклон","Руку'","ruku",12,{rep:3,note:"Со словами «Аллаху акбар» наклонись, ладони на колени, спина ровная."});
+    add(r,"Выпрямиться","Подъём из поклона","rise",7);
+    add(r,"Земной поклон","Первый суджуд","sujud",12,{rep:3,note:"Со словами «Аллаху акбар»: колени, ладони, нос и лоб."});
+    add(r,"Сидя","Короткое сидение",null,4,{note:"Со словами «Аллаху акбар» сядь на секунду."});
+    add(r,"Земной поклон","Второй суджуд","sujud",12,{rep:3,note:"Со словами «Аллаху акбар» снова в земной поклон."});
+    if(r===n){
+      add(r,"Сидя","Ташаххуд","tash",22,{note:"Сядь на левую стопу, правую поставь на пальцы. Руки на бёдрах. На «ля иляха» подними указательный палец правой руки, на «илля-ллах» опусти."});
+      add(r,"Сидя","Салават","salawat",22);
+      add(r,"Сидя","Дуа","rabbana",10);
+      add(r,"Сидя","Салям","salam",9,{rep:2,note:"Поверни голову направо и скажи салям, затем налево и скажи ещё раз."});
+    }else if(r===2){
+      add(r,"Сидя","Ташаххуд","tash",22,{note:"Сядь как в конце намаза. Прочитай только ташаххуд — без салавата."});
+      add(r,"Встать","На "+(r+1)+"-й ракат","takbir",4,{note:"Со словами «Аллаху акбар» встань. В "+(r+1)+"-м ракате — только аль-Фатиха, без второй суры."});
+    }else{
+      add(r,"Встать","На "+(r+1)+"-й ракат","takbir",4,{note:"Со словами «Аллаху акбар» встань."});
+    }
+  }
+  S.forEach(x=>x.st=stOf(x,n));
+  return S;
+}
+const SPEEDS=[[1.7,"очень медленно"],[1.35,"медленнее"],[1,"обычно"],[.8,"быстрее"],[.6,"быстро"]];
+const PS={p:null,steps:[],i:0,t:0,playing:false,last:0,raf:0,wl:null,spd:2};
+try{const v=parseInt(localStorage.getItem("namaz-pspd"),10);if(v>=0&&v<SPEEDS.length)PS.spd=v}catch(e){}
+const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function renderLaunch(){
+  $("launch").innerHTML=ORDER.map(p=>'<button id="pr-'+p+'" data-pr="'+p+'"><b>'+NAMES[p]+'</b><span>'+RAKATS[p]+' '+(RAKATS[p]===2?"раката":RAKATS[p]===3?"раката":"раката")+' фарда</span></button>').join("");
+}
+/* Pose figures: side view, facing right (towards the qibla) */
+const FIGS={
+  itidal:'<circle cx="58" cy="20" r="9"/><path d="M58 29v39M58 68l-5 40M58 68l5 40M58 38l3 30"/>',
+  qiyam:'<circle cx="58" cy="20" r="9"/><path d="M58 29v39M58 68l-5 40M58 68l5 40M58 38l4 17 9 4"/>',
+  takbir:'<circle cx="58" cy="20" r="9"/><path d="M58 29v39M58 68l-5 40M58 68l5 40M58 38l9 5-2-21"/>',
+  ruku:'<circle cx="99" cy="64" r="9"/><path d="M50 108l2-42M56 108l-2-42M53 66h37M86 67l-26 18"/>',
+  sujud:'<circle cx="92" cy="101" r="7"/><path d="M30 108h26M56 108l-8-26M48 82l36 16M80 96l-6 12h14"/>',
+  jalsa:'<circle cx="54" cy="44" r="9"/><path d="M30 108h44M74 104l-26-6M48 98l4-45M52 62l14 24 8 12"/>'
+};
+function poseOf(s){
+  if(s.t.indexOf("Ният")===0) return "itidal";
+  if(s.t==="Начальный такбир") return "takbir";
+  return {"Стоя":"qiyam","Поясной поклон":"ruku","Выпрямиться":"itidal","Земной поклон":"sujud","Сидя":"jalsa","Встать":"itidal"}[s.pose]||"qiyam";
+}
+const FIGLBL={itidal:"стоя, руки вдоль тела",qiyam:"стоя, правая рука на левой",takbir:"ладони у ушей",ruku:"поясной поклон",sujud:"земной поклон",jalsa:"сидя на левой стопе"};
+function fig(k){return '<figure class="fig"><svg viewBox="0 0 120 116" role="img" aria-label="'+FIGLBL[k]+'"><line x1="10" y1="110" x2="112" y2="110" class="gnd"/><g class="body">'+FIGS[k]+'</g><path d="M104 14l8 6-8 6" class="qib"/></svg><figcaption>'+FIGLBL[k]+'</figcaption></figure>'}
+/* Texts split phrase by phrase: [arabic, transliteration (":" = long, "::" = extra long), translation] */
+const SEG={
+  sana:[["سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ","Субха:нака-лла:хумма ва би-хамдик","Пречист Ты, о Аллах, и хвала Тебе"],["وَتَبَارَكَ اسْمُكَ","ва таба:рака-смук","благословенно Твоё имя"],["وَتَعَالَى جَدُّكَ","ва та'а:ля: джаддук","превыше всего Твоё величие"],["وَلَا إِلَٰهَ غَيْرُكَ","ва ля: иля:ха гайрук","и нет бога, кроме Тебя"]],
+  auzu:[["أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ","А'у:зу би-лла:хи мина-ш-шайта:ни-р-раджи:м","Прибегаю к Аллаху от проклятого шайтана"],["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","Бисми-лла:хи-р-рахма:ни-р-рахи:м","С именем Аллаха, Милостивого, Милосердного"]],
+  fatiha:[["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ","Аль-хамду ли-лла:хи рабби-ль-'а:лями:н","Хвала Аллаху, Господу миров"],["الرَّحْمَٰنِ الرَّحِيمِ","Ар-рахма:ни-р-рахи:м","Милостивому, Милосердному"],["مَالِكِ يَوْمِ الدِّينِ","Ма:лики йауми-д-ди:н","Властелину Дня воздаяния"],["إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ","Иййа:ка на'буду ва иййа:ка наста'и:н","Тебе одному мы поклоняемся и Тебя одного молим о помощи"],["اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ","Ихдина-с-сыра:та-ль-мустаки:м","Веди нас прямым путём"],["صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ","Сыра:та-ллязи:на ан'амта 'аляйхим","путём тех, кого Ты облагодетельствовал"],["غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ","гайри-ль-магду:би 'аляйхим ва ля-д-да::лли:н","не тех, на кого пал гнев, и не заблудших"],["آمِين","А:ми:н — про себя","Прими нашу мольбу"]],
+  kawthar:[["إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ","Инна:: а'тайна:ка-ль-каусар","Мы даровали тебе аль-Каусар"],["فَصَلِّ لِرَبِّكَ وَانْحَرْ","Фа-салли ли-раббика ва-нхар","Поэтому молись Господу и закалывай жертву"],["إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ","Инна ша:ни'ака хува-ль-абтар","Твой ненавистник сам останется без потомства"]],
+  ikhlas:[["قُلْ هُوَ اللَّهُ أَحَدٌ","Куль хува-лла:ху ахад","Скажи: «Он — Аллах Единый»"],["اللَّهُ الصَّمَدُ","Алла:ху-с-самад","Аллах Самодостаточный"],["لَمْ يَلِدْ وَلَمْ يُولَدْ","Лям ялид ва лям ю:ляд","Он не родил и не был рождён"],["وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ","Ва лям якун ляху: куфуван ахад","и нет никого, равного Ему"]],
+  rise:[["سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ","Сами'а-лла:ху лиман хамидах — выпрямляясь","Аллах слышит того, кто Его восхваляет"],["رَبَّنَا وَلَكَ الْحَمْدُ","Раббана: ва ляка-ль-хамд — стоя","Господь наш, Тебе хвала"]],
+  tash:[["التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ","Ат-тахиййа:ту ли-лла:хи ва-с-салява:ту ва-т-таййиба:т","Приветствия, молитвы и благие слова — Аллаху"],["السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ","Ас-саля:му 'аляйка аййюха-н-набиййу ва рахмату-лла:хи ва барака:тух","Мир тебе, о Пророк, милость Аллаха и Его благословения"],["السَّلَامُ عَلَيْنَا وَعَلَىٰ عِبَادِ اللَّهِ الصَّالِحِينَ","Ас-саля:му 'аляйна: ва 'аля: 'иба:ди-лла:хи-с-са:лихи:н","Мир нам и праведным рабам Аллаха"],["أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ","Ашхаду ан ля:: иля:ха илля-лла:х","Свидетельствую, что нет бога, кроме Аллаха"],["وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ","ва ашхаду анна Мухаммадан 'абдуху: ва расу:люх","и свидетельствую, что Мухаммад — Его раб и посланник"]],
+  salawat:[["اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ","Алла:хумма салли 'аля: Мухаммадин ва 'аля:: а:ли Мухаммад","О Аллах, благослови Мухаммада и семью Мухаммада"],["كَمَا صَلَّيْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ","кама: салляйта 'аля:: Ибра:хи:ма ва 'аля:: а:ли Ибра:хи:м","как Ты благословил Ибрахима и семью Ибрахима"],["إِنَّكَ حَمِيدٌ مَجِيدٌ","иннака хами:дун маджи:д","Поистине, Ты Достойный хвалы, Славный"],["اللَّهُمَّ بَارِكْ عَلَىٰ مُحَمَّدٍ وَعَلَىٰ آلِ مُحَمَّدٍ","Алла:хумма ба:рик 'аля: Мухаммадин ва 'аля:: а:ли Мухаммад","О Аллах, ниспошли благодать Мухаммаду и семье Мухаммада"],["كَمَا بَارَكْتَ عَلَىٰ إِبْرَاهِيمَ وَعَلَىٰ آلِ إِبْرَاهِيمَ","кама: ба:ракта 'аля:: Ибра:хи:ма ва 'аля:: а:ли Ибра:хи:м","как Ты ниспослал её Ибрахиму и семье Ибрахима"],["إِنَّكَ حَمِيدٌ مَجِيدٌ","иннака хами:дун маджи:д","Поистине, Ты Достойный хвалы, Славный"]],
+  rabbana:[["رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً","Раббана:: а:тина: фи-д-дунья: хасанатан","Господь наш, даруй нам благо в этой жизни"],["وَفِي الْآخِرَةِ حَسَنَةً","ва фи-ль-а:хырати хасанатан","и благо в вечной"],["وَقِنَا عَذَابَ النَّارِ","ва кына: 'аза:ба-н-на:р","и защити нас от мучений огня"]]
+};
+function linesHtml(L){return '<div class="lines">'+L.map((x,i)=>'<div class="ln'+(i===0?' now':'')+'"><div class="ar" lang="ar">'+x[0]+'</div><div class="tr">'+mark(x[1])+'</div><div class="ru">'+esc(x[2])+'</div></div>').join("")+'</div>'}
+function lineAt(L,p){const w=L.map(x=>x[1].length+8),T=w.reduce((a,b)=>a+b,0);let acc=0;for(let i=0;i<L.length;i++){acc+=w[i];if(p*T<acc)return i}return L.length-1}
+function setLine(el,idx){if(!el)return;el.querySelectorAll(".lines .ln").forEach((d,j)=>{d.classList.toggle("now",j===idx);d.classList.toggle("done",j<idx)})}
+const STL={"фард":"без него намаз недействителен","ваджиб":"обязательно; если пропустил по забывчивости — в конце 2 земных поклона забывчивости (саджда сахв)","сунна":"желательно, так делал Пророк ﷺ"};
+function stOf(s,n){
+  const t=s.t;
+  if(/^Ният|^Начальный|^Руку|суджуд$|ракат$/.test(t)) return "фард";
+  if(t==="Сура аль-Фатиха") return s.r<=2?"ваджиб":"сунна";
+  if(/^Короткая сура|^Подъём|^Короткое сидение|^Салям/.test(t)) return "ваджиб";
+  if(t==="Ташаххуд") return s.r===n?"фард":"ваджиб";
+  return "сунна";
+}
+function repHtml(s){
+  const lab=s.tx===TX.salam?["Направо","Налево"]:Array.from({length:s.rep},(_,i)=>(i+1)+"-й раз");
+  return '<ol class="reps">'+lab.map((l,i)=>'<li'+(i===0?' class="now"':'')+'><span class="rn">'+l+'</span><span class="ar" lang="ar">'+s.tx[0]+'</span><span class="tr">«'+mark(s.tx[1])+'»</span></li>').join("")+'</ol>';
+}
+function setRep(el,idx){
+  if(!el)return;el.querySelectorAll(".reps li").forEach((li,j)=>{li.classList.toggle("now",j===idx);li.classList.toggle("done",j<idx)});
+}
+function startPractice(p){
+  PS.p=p;PS.steps=buildSteps(p);PS.i=0;PS.t=0;
+  $("prayTitle").textContent=NAMES[p];
+  $("pList").innerHTML=PS.steps.map((s,i)=>'<article class="ps" data-si="'+i+'"><div class="pose"><span>'+s.pose+' · ракат '+s.r+'</span><span class="st st-'+(s.st==="фард"?"f":s.st==="ваджиб"?"v":"s")+'" title="'+STL[s.st]+'">'+s.st+'</span></div>'+
+    '<div class="pshead"><div><h3>'+esc(s.t)+(s.rep?'<span class="rep">×'+s.rep+'</span>':'')+'</h3>'+
+    (s.note?'<div class="ru">'+esc(s.note)+'</div>':'')+'</div>'+fig(poseOf(s))+'</div>'+
+    (s.tx?(s.rep?repHtml(s)+'<div class="ru">'+esc(s.tx[2])+'</div>':SEG[s.k]?linesHtml(SEG[s.k]):'<div class="ar" lang="ar">'+s.tx[0]+'</div><div class="tr">«'+mark(s.tx[1])+'»</div><div class="ru">'+esc(s.tx[2])+'</div>'):'')+
+    '<div class="hold"><i></i></div></article>').join("")+
+    '<article class="ps end" data-si="'+PS.steps.length+'"><h3>Тренировка окончена</h3><div class="ru">Повторяй, пока не сможешь пройти без экрана.</div><div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><button class="btn" id="pAgain">Ещё раз</button><button class="btn" id="pClose">Закрыть</button></div></article>';
+  $("pray").hidden=false;document.body.style.overflow="hidden";
+  $("pScroll").scrollTop=0;
+  updSpd();
+  try{navigator.wakeLock&&navigator.wakeLock.request("screen").then(l=>PS.wl=l).catch(()=>{})}catch(e){}
+  go(0);play(true);
+}
+function stopPractice(){
+  play(false);$("pray").hidden=true;document.body.style.overflow="";
+  try{PS.wl&&PS.wl.release()}catch(e){}PS.wl=null;
+  const b=$("pr-"+PS.p);b&&b.focus();
+}
+function go(i){
+  const N=PS.steps.length;
+  PS.i=Math.max(0,Math.min(i,N));PS.t=0;
+  document.querySelectorAll("#pList .ps").forEach((el,j)=>{el.classList.toggle("on",j===PS.i);const h=el.querySelector(".hold i");if(h)h.style.width=j<PS.i?"100%":"0"});
+  const el=document.querySelector('#pList .ps[data-si="'+PS.i+'"]'), sc=$("pScroll");
+  PS.ri=0;setRep(curEl(),0);PS.li=0;setLine(curEl(),0);
+  align(true);
+  const s=PS.steps[PS.i];
+  $("prayRak").textContent=s?"Ракат "+s.r+" из "+RAKATS[PS.p]+" · шаг "+(PS.i+1)+" из "+N:"Готово";
+  $("pBar").style.width=(PS.i/N*100)+"%";
+  if(PS.i>=N) play(false);
+}
+/* Put the current step right under the top bar; a step taller than the screen is scrolled through while its time runs. */
+const GAP=12;
+function curEl(){return document.querySelector('#pList .ps[data-si="'+PS.i+'"]')}
+function align(smooth){
+  const el=curEl(), sc=$("pScroll");if(!el)return;
+  PS.follow=false;
+  sc.scrollTo({top:Math.max(0,el.offsetTop-GAP),behavior:smooth&&!reduced?"smooth":"auto"});
+  if(el.offsetHeight>sc.clientHeight-2*GAP) setTimeout(()=>{PS.follow=true},smooth?450:0);
+}
+function follow(p){
+  if(!PS.follow)return;
+  const el=curEl(), sc=$("pScroll");if(!el)return;
+  const extra=el.offsetHeight-sc.clientHeight+2*GAP;if(extra<=0)return;
+  const q=Math.max(0,Math.min(1,(p-0.12)/0.76));
+  sc.scrollTop=el.offsetTop-GAP+extra*q;
+}
+function play(on){
+  PS.playing=on&&PS.i<PS.steps.length;
+  $("pPlay").textContent=PS.playing?"Пауза":(PS.i>=PS.steps.length?"Сначала":"Продолжить");
+  cancelAnimationFrame(PS.raf);
+  if(PS.playing){PS.last=performance.now();PS.raf=requestAnimationFrame(loop)}
+}
+function loop(ts){
+  if(!PS.playing) return;
+  const dt=(ts-PS.last)/1000;PS.last=ts;
+  const s=PS.steps[PS.i];
+  if(s){
+    PS.t+=dt;const dur=s.dur*SPEEDS[PS.spd][0];
+    const h=document.querySelector('#pList .ps[data-si="'+PS.i+'"] .hold i');
+    if(h)h.style.width=Math.min(100,PS.t/dur*100)+"%";
+    follow(PS.t/dur);
+    if(!s.rep&&SEG[s.k]){const li=lineAt(SEG[s.k],PS.t/dur);if(li!==PS.li){PS.li=li;setLine(curEl(),li)}}
+    if(s.rep){const ri=Math.min(s.rep-1,Math.floor(PS.t/dur*s.rep));if(ri!==PS.ri){PS.ri=ri;setRep(curEl(),ri)}}
+    if(PS.t>=dur) go(PS.i+1);
+  }
+  if(PS.playing) PS.raf=requestAnimationFrame(loop);
+}
+function updSpd(){$("pSpd").textContent=SPEEDS[PS.spd][1];$("pSlow").disabled=PS.spd===0;$("pFast").disabled=PS.spd===SPEEDS.length-1;try{localStorage.setItem("namaz-pspd",String(PS.spd))}catch(e){}}
+document.addEventListener("keydown",e=>{if($("pray").hidden)return;if(e.key==="Escape")stopPractice();else if(e.key===" "){e.preventDefault();play(!PS.playing)}else if(e.key==="ArrowRight")go(PS.i+1);else if(e.key==="ArrowLeft")go(PS.i-1)});
+document.addEventListener("click",e=>{const a=e.target.closest(".ps[data-si]");if(a&&!e.target.closest("button")){go(+a.dataset.si)}});
+
+GUIDE.texts.h='<p class="lead">Учи по одной строке в день, слушая аудио чтеца. Пока не выучил аль-Фатиху, спроси имама, как совершать намаз в это время.</p>'+
+  [["А'узу и Бисмиллях — перед аль-Фатихой","auzu"],["Сура аль-Фатиха — в каждом ракате","fatiha"],["Сура аль-Каусар (108) — короткая сура","kawthar"],["Сура аль-Ихлас (112) — короткая сура","ikhlas"],["Ташаххуд — в каждом сидении","tash"],["Салават — в последнем сидении","salawat"],["Дуа в конце — перед салямом","rabbana"]]
+  .map(([h,k])=>'<section class="tblock"><h3>'+h+'</h3>'+linesHtml(SEG[k]).replace(' now','')+'</section>').join("");
+/* ---------- progress-aware focus: what to do now, dimming, deep links ---------- */
+const curWeek=()=>Math.min(weekIndex(new Date()),3);
+const DMETA={morning:[["d-wake",0],["d-lazy",0],["d-after",0],["d-istighfar",0]],day:[["d-qadar",2],["d-auzu",2],["d-hasbuna",2]],night:[["d-routine",1],["d-aslamtu",1],["d-bismika",1]]};
+const ZMETA={i:0,t:1,s:1};
+const PLINKS=[
+  [["Фаджр","today||prayers"],["Иша","today||prayers"],["Как совершать","learn|practice|practice"],["Дуа при пробуждении","dua|morning|d-wake"],["Своя дуа после фаджра","dua|morning|d-after"],["Астагфируллах ×33","zikr|i|"],["Телефон в другую комнату",""]],
+  [["Магриб","today||prayers"],["5 минут перед сном","dua|night|d-routine"],["Ля иляха… ×100","zikr|t|"]],
+  [["Зухр и аср","today||prayers"],["Слова на трудный момент","dua|day|"],["Благодарность",""],["Тайное доброе дело",""]],
+  [["Страница Корана",""],["Пауза перед намазом","learn|steps|"]]
+];
+function plinks(list){return '<ul class="plinks">'+list.map(([t,g])=>'<li>'+(g?'<a href="#'+g.split("|")[0]+'" data-go="'+g+'">'+esc(t)+' →</a>':'<span>'+esc(t)+'</span>')+'</li>').join("")+'</ul>'}
+function goTo(spec){
+  const [v,tb,target]=spec.split("|");
+  if(v==="dua"&&tb&&DUAS[tb]){tab=tb;renderDuas()}
+  if(v==="zikr"&&tb&&ZIKR[tb]){zsel=tb;renderCounter()}
+  if(v==="learn"&&tb&&GUIDE[tb]){gtab=tb;renderGuide()}
+  route2(v);
+  const id=target||(v==="learn"&&GUIDE[tb]?"guide":v==="zikr"?"zikrPanel":"");
+  if(id){requestAnimationFrame(()=>{const el=$(id);if(!el)return;el.scrollIntoView({block:"start",behavior:reduced?"auto":"smooth"});el.classList.remove("flash");void el.offsetWidth;el.classList.add("flash")})}
+}
+function decorateDuas(){
+  const wi=curWeek();
+  [...$("duas").children].forEach((el,i)=>{const m=(DMETA[tab]||[])[i];if(!m)return;el.id=m[0];
+    const w=el.querySelector(".when");
+    if(m[1]>wi){el.classList.add("later");w&&w.insertAdjacentHTML("beforeend",' <span class="tag">с недели '+(m[1]+1)+'</span>')}
+    else if(m[1]===wi&&wi>0){w&&w.insertAdjacentHTML("beforeend",' <span class="tag new">новое</span>')}});
+  TABS.forEach(([id])=>{const b=$("tab-"+id);if(b)b.classList.toggle("later",DMETA[id].every(m=>m[1]>wi))});
+}
+function decorateZikr(){
+  const wi=curWeek();
+  Object.keys(ZIKR).forEach(z=>{const b=$("z-"+z);if(!b)return;if(ZMETA[z]>wi){b.classList.add("later");b.insertAdjacentHTML("beforeend",'<small>нед. '+(ZMETA[z]+1)+'</small>')}});
+  if(ZMETA[zsel]>wi){$("counter").insertAdjacentHTML("afterbegin",'<div class="soon">Этот зикр по плану с недели '+(ZMETA[zsel]+1)+'. Можно и сейчас, но сначала закрепи «Астагфируллах».</div>')}
+  const rows=[
+    [0,"Весь день: дорога, перерывы, автобус","Астагфируллах","33 раза","zikr|i|"],
+    [1,"Утром после фаджра или частями за день","Ля иляха илля-ллах…","100 раз","zikr|t|"],
+    [1,"Перед сном, лёжа на правом боку","Субхана-ллах · Аль-хамду ли-ллях · Аллаху акбар","33 · 33 · 34","zikr|s|"],
+    [2,"Неудача / злость / тяжело на душе","Кадаруллах · А'узу билляхи · Хасбуна-ллах","по ситуации","dua|day|"]
+  ];
+  $("zsched").innerHTML=rows.map(([w,when,what,n,g])=>
+    '<li class="'+(w>wi?"later":"")+'"><span class="zw">'+esc(when)+(w>wi?' · с недели '+(w+1):'')+'</span><a href="#'+g.split("|")[0]+'" data-go="'+g+'">'+esc(what)+' →</a><span class="zn num">'+n+'</span></li>').join("");
+}
+function nowTasks(){
+  const now=new Date(),k=key(now),T=calc(now),h=hours(now),wi=curWeek(),plan=planFor(now),L=[];
+  const P=p=>plan.includes(p)&&!isDone(k,p);
+  const H=id=>{const x=HABITS.find(y=>y.id===id);return x&&x.w<=wi&&!habitDone(k,x)};
+  const ends={fajr:T.sunrise,dhuhr:T.asr,asr:T.maghrib,maghrib:T.isha,isha:24};
+  const pr=(p,t,d)=>L.push({t,d,act:'<button class="do" data-k="'+k+'" data-p="'+p+'">Сделал</button>',go:"learn|practice|practice"});
+  const hb=(id,t,d,go)=>L.push({t,d,act:'<button class="do" data-hk="'+k+'" data-h="'+id+'">Сделал</button>',go});
+  const zk=(z,t,d)=>L.push({t,d,act:'<a class="do" href="#zikr" data-go="zikr|'+z+'|">Открыть счётчик</a>'});
+  if(h<T.fajr){L.push({t:"Сейчас — спать",d:"Фаджр начнётся в "+hm(T.fajr)+". Проверь будильник на 6:30."})}
+  if(h>=T.fajr&&h<T.sunrise&&P("fajr")) pr("fajr","Фаджр — до "+hm(T.sunrise),"Омовение → 2 раката фарда. Успей до восхода.");
+  ["fajr","dhuhr","asr","maghrib"].forEach(p=>{if(h>=ends[p]&&P(p)) pr(p,"Восполни "+NAMES[p].toLowerCase(),"Время вышло, но намаз можно совершить сейчас: "+RAK_SHORT[p]+".")});
+  if(h>=T.fajr&&h<12){if(H("wake"))hb("wake","Дуа при пробуждении","Одна фраза, 10 секунд.","dua|morning|d-wake");if(H("lazy"))hb("lazy","Дуа от лени","20 секунд, сразу после пробуждения.","dua|morning|d-lazy");if(H("dua"))hb("dua","Своя дуа после фаджра","1–2 минуты своими словами.","dua|morning|d-after")}
+  if(h>=T.dhuhr&&h<T.asr&&P("dhuhr")) pr("dhuhr","Зухр — до "+hm(T.asr),"4 раката фарда, в перерыве между парами.");
+  if(h>=T.asr&&h<T.maghrib&&P("asr")) pr("asr","Аср — до "+hm(T.maghrib),"4 раката фарда.");
+  if(h>=T.maghrib&&h<T.isha&&P("maghrib")) pr("maghrib","Магриб — до "+hm(T.isha),"3 раката фарда.");
+  if(h>=T.sunrise&&h<T.isha+3){if(H("istighfar"))zk("i","«Астагфируллах» — "+zcount(k,"i")+" из 33","Говори по дороге и в перерывах, нажимай счётчик.");if(H("tahlil"))zk("t","«Ля иляха…» — "+zcount(k,"t")+" из 100","Можно частями за день.")}
+  if(h>=T.isha){if(P("isha"))pr("isha","Иша","4 раката фарда. Лучше до полуночи.");if(H("night"))hb("night","5 минут перед сном","Омовение, правый бок, аятуль-Курси, 3 суры, 33/33/34.","dua|night|d-routine");if(H("phone"))hb("phone","Телефон в другую комнату","За 30 минут до сна.","")}
+  if(!L.length){const nx=ORDER.find(p=>T[p]>h);L.push({t:"На сейчас всё сделано",d:nx?"Следующее: "+NAMES[nx]+" в "+hm(T[nx])+".":"Ложись спать, будильник на 6:30."})}
+  return L.slice(0,3);
+}
+function renderNow(){
+  const L=nowTasks();
+  $("nowPanel").innerHTML='<div class="panel-head"><h2>Что делать сейчас</h2><span class="meta">неделя '+(curWeek()+1)+' из 4</span></div><ul class="nowlist">'+
+    L.map((x,i)=>'<li class="'+(i===0?"first":"")+'"><div><strong>'+esc(x.t)+'</strong><p>'+esc(x.d)+'</p></div><div class="acts">'+(x.act||"")+(x.go?'<a href="#'+x.go.split("|")[0]+'" data-go="'+x.go+'">Как?</a>':'')+'</div></li>').join("")+'</ul>';
+}
+
+/* ---------- clock + font size ---------- */
+function tick(){const n=new Date();$("clock").innerHTML=n.getHours()+":"+pad(n.getMinutes())+"<small>:"+pad(n.getSeconds())+"</small>"}
+const FS=[.85,.9,1,1.1,1.2,1.3,1.4];
+let fsI=2;
+try{const v=parseFloat(localStorage.getItem("namaz-fs"));const i=FS.indexOf(v);if(i>=0)fsI=i}catch(e){}
+let showAr=false;
+try{showAr=localStorage.getItem("namaz-ar")==="1"}catch(e){}
+function applyAr(){
+  document.documentElement.classList.toggle("no-ar",!showAr);
+  $("arTog").setAttribute("aria-pressed",String(showAr));
+  try{localStorage.setItem("namaz-ar",showAr?"1":"0")}catch(e){}
+}
+function applyFs(){
+  document.documentElement.style.setProperty("--fs",FS[fsI]);
+  $("fs-val").textContent=Math.round(FS[fsI]*100)+"%";
+  $("fs-down").disabled=fsI===0;$("fs-up").disabled=fsI===FS.length-1;
+  $("pfs-down").disabled=fsI===0;$("pfs-up").disabled=fsI===FS.length-1;
+  try{localStorage.setItem("namaz-fs",String(FS[fsI]))}catch(e){}
+}
+
+/* ---------- events ---------- */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  if(b.id==="arTog"){showAr=!showAr;applyAr();toast(showAr?"Арабский текст показан":"Арабский текст скрыт: только транскрипция и перевод");return}
+  if(b.id==="fs-down"&&fsI>0){fsI--;applyFs();return}
+  if(b.id==="fs-up"&&fsI<FS.length-1){fsI++;applyFs();return}
+  if(b.dataset.gtab){gtab=b.dataset.gtab;try{localStorage.setItem("namaz-gtab",gtab)}catch(e){}renderGuide();return}
+  if(b.dataset.p&&b.dataset.k){toggle(b.dataset.k,b.dataset.p);return}
+  if(b.dataset.h&&b.dataset.hk){toggleHabit(b.dataset.hk,b.dataset.h);return}
+  if(b.id==="tap"){tapZikr();return}
+  if(b.dataset.pr){startPractice(b.dataset.pr);return}
+  if(b.id==="pStop"||b.id==="pClose"){stopPractice();return}
+  if(b.id==="pAgain"){go(0);play(true);return}
+  if(b.id==="pPlay"){if(PS.i>=PS.steps.length){go(0);play(true)}else play(!PS.playing);return}
+  if(b.id==="pNext"){go(PS.i+1);return}
+  if(b.id==="pPrev"){go(PS.i-1);if(!PS.playing)play(false);return}
+  if(b.id==="pfs-down"&&fsI>0){fsI--;applyFs();align(false);return}
+  if(b.id==="pfs-up"&&fsI<FS.length-1){fsI++;applyFs();align(false);return}
+  if(b.id==="pSlow"&&PS.spd>0){PS.spd--;updSpd();return}
+  if(b.id==="pFast"&&PS.spd<SPEEDS.length-1){PS.spd++;updSpd();return}
+  if(b.id==="zreset"){resetZikr();return}
+  if(b.dataset.z){zsel=b.dataset.z;try{localStorage.setItem("namaz-zsel",zsel)}catch(e){}renderCounter();return}
+  if(b.id==="hideStart"){startHidden=true;try{localStorage.setItem("namaz-start-hidden","1")}catch(e){}renderStart();return}
+  if(b.dataset.tab){tab=b.dataset.tab;try{localStorage.setItem("namaz-tab",tab)}catch(e){}renderDuas();return}
+  if(b.id==="rs-ask"){confirmRestart=true;renderRestart();return}
+  if(b.id==="rs-no"){confirmRestart=false;renderRestart();return}
+  if(b.id==="rs-yes"){confirmRestart=false;state.start=key(new Date());render();persist();toast("План начат с сегодняшнего дня");}
+});
+
+applyAr();applyFs();tick();render();renderGuide();renderDuas();renderLaunch();
+["legPractice","legDua"].forEach(id=>$(id).innerHTML=LEG);
+$("legPray").innerHTML='<div class="leg"><span class="lv">аа</span> — тянуть вдвое · <span class="xl">ааа</span> — тянуть ещё дольше · остальное коротко</div>';
+/* ---------- views ---------- */
+const VIEWS=["today","zikr","learn","dua","progress"];
+function route(){
+  let v=(location.hash||"").slice(1);
+  if(v==="guide"||v==="practice") v="learn";
+  if(!VIEWS.includes(v)) v="today";
+  VIEWS.forEach(x=>{$("v-"+x).hidden=x!==v;const a=$("nav-"+x);if(x===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  window.scrollTo(0,0);
+}
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[href^="#"]');if(!a)return;
+  const v=a.getAttribute("href").slice(1);
+  e.preventDefault();
+  if(a.dataset.go){goTo(a.dataset.go);return}
+  if(location.hash!=="#"+v){try{location.hash=v}catch(err){}}
+  route2(v);
+});
+function route2(v){if(v==="guide"||v==="practice")v="learn";if(!VIEWS.includes(v))v="today";VIEWS.forEach(x=>{$("v-"+x).hidden=x!==v;const a=$("nav-"+x);if(x===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});window.scrollTo(0,0)}
+window.addEventListener("hashchange",route);
+route();
+setInterval(tick,1000);
+setInterval(render,30000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)render()});
+
+/* ---------- account sync ---------- */
+(async function(){
+  if(!window.claude||!window.claude.use) return;
+  try{
+    const [db,user]=await Promise.all([window.claude.use("db"),window.claude.use("user")]);
+    if(!db||!user) return;
+    const id=await user.id();
+    if(!id) return;
+    ref=db.doc("data/users/"+id+"/tracker");
+    const s=$("sync");s.classList.add("cloud");s.lastElementChild.textContent="Отметки сохраняются в твоём аккаунте: видны на телефоне и компьютере";
+    let first=true;
+    ref.onSnapshot(snap=>{
+      if(snap.metadata.hasPendingWrites||saving||saveTimer) return;
+      if(snap.exists){
+        const d=snap.data();
+        state=norm(JSON.parse(JSON.stringify(d)));
+        try{localStorage.setItem(LS,JSON.stringify(state))}catch(e){}
+        render();
+      }else if(first&&Object.keys(state.days).length){
+        /* local marks exist but the account copy is empty: they upload with the next tap */
+      }
+      first=false;
+    },()=>{const s=$("sync");s.classList.remove("cloud");s.lastElementChild.textContent="Нет связи с аккаунтом. Отметки сохраняются в этом браузере";ref=null});
+  }catch(e){}
+})();
+})();
+</script>
+
+</body>
+</html>
